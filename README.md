@@ -1,15 +1,15 @@
 # CheckersNomisec
 In all the NomiSec repository there are some checkers that aren't PoC and here they are described as what they are. Checkers.
-
-56- CVE-2023-36884 Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+1- CVE-2023-36884 Checker
 (https://github.com/tarraschk/CVE-2023-36884-Checker)   
 
 The code is just a PowerShell script that checks whether a system is vulnerable to CVE-2023-36884.
 The code works by checking whether the system is running Microsoft-provided mitigations for this vulnerability. If the system is not performing the mitigations, the PoC will display a warning. It is used to help users identify whether their systems are vulnerable to a particular vulnerability.
 If the system is not performing the mitigations, the code will display a warning.
 
-
-55- 2022/CVE-2022-20866.json  Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+2- 2022/CVE-2022-20866.json  Checker
 (https://github.com//CiscoPSIRT//CVE-2022-20866) 
 
 The code checks whether an RSA private key contained in a PKCS12 file is vulnerable to a specific flaw. The flaw in question is referenced in the code as "Cisco RSA Private Key Leak Vulnerability (CVE-2022-20866)".
@@ -22,10 +22,10 @@ Insufficient size of key components: It also checks whether the key components (
 If the private key is found to be invalid or has short components, the code issues a warning about the vulnerability but does not perform any attacks or exploits. Instead, it provides information about the key that can be used to make decisions about replacing the key or implementing additional security measures.
 
 the code does not exploit the flaw, but only verifies the validity of the private key and its compliance with security standards.
-.
 
 
-54- 2015/CVE-2015-0204.json  Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+3- 2015/CVE-2015-0204.json  Checker
 (https://github.com//felmoltor//FreakVulnChecker) 
 
 This is a Bash script that checks whether a server is accepting EXPORT cipher suites that may be vulnerable to the FREAK attack (CVE-2015-0204). 
@@ -33,8 +33,8 @@ The script checks whether the server supports EXPORT cipher suites and records t
 The purpose of this script is to help identify servers that are vulnerable to the FREAK attack, allowing administrators to take steps to reconfigure their servers and disable acceptance of EXPORT cipher suites.
 
 
-
-53- 2015/CVE-2015-3825.json Checker? Deprecated? Broken link?
+-----------------------------------------------------------------------------------------------------------------------------------------
+4- 2015/CVE-2015-3825.json Checker? Deprecated? Broken link?
 (https://github.com//roeeh//conscryptchecker) 
 
 Supposedly
@@ -74,8 +74,8 @@ LINK FOR THE GOOGLEPLAY  USER NOT AVAIABLE
 
 
 
-
-52- 2017/CVE-2017-6558.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+5- 2017/CVE-2017-6558.json Checker
 (https://github.com//GemGeorge//iBall-UTStar-CVEChecker) 
 
 This code does not exploit the vulnerability,it is a "checker" or vulnerability scanner. It checks whether a network device is vulnerable to three specific vulnerabilities: CVE-2017-6558, CVE-2017-14243, and CVE-2017-14244. The code does not perform any active exploitation or exploitation of these vulnerabilities; instead, it checks whether certain conditions and indicators of these vulnerabilities are present on a target device.
@@ -90,8 +90,8 @@ What the code does is the following:
 
 In short, the code is used to check whether a device is vulnerable to specific vulnerabilities and display information about the device, but it does not perform any exploits or attacks against the device. It is a tool for security checking purposes.
 
-
-51- 2015/CVE-2015-0235.json  Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+6- 2015/CVE-2015-0235.json  Checker
 (https://github.com//fser//ghost-checker) 
 
 This code is primarily a checker rather than an exploit. Its purpose is to identify whether the system's `gethostbyname_r` function is vulnerable to a specific type of vulnerability related to buffer overflow.
@@ -104,38 +104,28 @@ The code does the following:
 
 If the `CANARY` value is modified, it suggests a potential vulnerability. If `retval` is `ERANGE`, it implies that the system is not vulnerable. However, this code does not actively exploit any vulnerability or perform any malicious actions. It is a diagnostic tool used to determine the presence of a specific type of vulnerability.
 
-
-50- 2022/CVE-2022-22965.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+7- 2022/CVE-2022-22965.json Checker
 (https://github.com//alt3kx//CVE-2022-22965) 
 
 This script is primarily a checker for the CVE-2022-22965 vulnerability in Spring Framework versions 5.2.x and 5.3.x. It checks whether a given target is vulnerable to this specific vulnerability by sending a specific payload and analyzing the response. It doesn't actively exploit the vulnerability but rather assesses whether the vulnerability is present based on the target's response.
 
 In summary, it's a checker, not a vulnerability explorer or exploiter.
 
-
-49- 2020/CVE-2020-3452.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+8- 2020/CVE-2020-3452.json Checker
 (https://github.com//faisalfs10x//Cisco-CVE-2020-3452-shodan-scanner) 
 
 This script is a checker, not an exploit. It's designed to check for the presence of the Cisco ASA CVE-2020-3452 vulnerability in Cisco ASA devices. The script uses Shodan to identify Cisco ASA devices based on their ASN (Autonomous System Number) and then attempts to verify if they are vulnerable by making a specific HTTP request and checking the response. If the response indicates the presence of the vulnerability, it reports the target as vulnerable; otherwise, it reports the target as not vulnerable.
 
-
-48- 2023/CVE-2023-37979.json Checker and PoC
-(https://github.com//d0rb//CVE-2023-37979)
-
-This code does both: it first checks if a WordPress website is vulnerable to a specific security issue in the Ninja Forms plugin, and if it determines that the site is vulnerable, it attempts to exploit the vulnerability by sending a payload.
-Here's how it works:
-It checks if the target WordPress site is running a vulnerable version of the Ninja Forms plugin by examining the contents of the readme.txt file associated with the plugin. If it detects a vulnerable version (<= 3.6.25), it reports that the Ninja Forms plugin is vulnerable.
-If the site is found to be vulnerable, it proceeds to the exploit() function, which sends a payload to the site using a POST request to the wp-admin/admin-ajax.php endpoint. The payload is sent to exploit the vulnerability.
-The payload sent to the site is not shown in the code but should be customized by the user to execute specific actions or commands on the target system.
-So, the code combines vulnerability checking with an actual exploitation attempt, making it both a checker and an exploit tool. However, please note that using this code for exploiting websites without proper authorization is illegal and unethical. It should only be used for educational and ethical purposes, such as testing your own websites or systems for vulnerabilities.
-
-
-47-2022/CVE-2022-0847.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+9- 2022/CVE-2022-0847.json Checker
 (https://github.com//basharkey//CVE-2022-0847-dirty-pipe-checker) 
 
 The Bash scripts are checkers. They are used to check whether a Linux kernel version is vulnerable based on certain version criteria. These scripts do not perform any exploitation or attack; instead, they help determine the vulnerability status of a given kernel version.
 
-46- 2021/CVE-2021-41773.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+10- 2021/CVE-2021-41773.json Checker
 (https://github.com//jheeree//Simple-CVE-2021-41773-checker)
 
 This Bash script is a checker for the CVE-2021-41773 vulnerability in Apache HTTP Server. This vulnerability allows an attacker to access sensitive files on the server due to a misconfiguration in the server's mod_proxy module.
@@ -153,10 +143,8 @@ Here's what the script does:
 
 In summary, this script is designed to quickly identify whether a list of hosts is vulnerable to the CVE-2021-41773 vulnerability in the Apache HTTP Server. If the script finds that a host is vulnerable, it marks it as such in the report file.
 
-
-
-
-45-2015/CVE-2015-1635.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+11- 2015/CVE-2015-1635.json Checker
 (https://github.com//xPaw//HTTPsys) 
 
 This PHP script is just a vulnerability checker. It does not exploit any vulnerabilities or perform any malicious actions. Its primary purpose is to determine whether a server is vulnerable to the CVE-2015-1635 (MS15-034) vulnerability, which is a security flaw in the HTTP.sys component of Windows. It sends a specially crafted HTTP request to the server to check if it responds in a way that indicates the presence of the vulnerability. Depending on the response, it classifies the server as vulnerable, not vulnerable, or patched.
@@ -191,15 +179,14 @@ This PHP script is just a vulnerability checker. It does not exploit any vulnera
 
 In summary, it helps users assess the security of a server by checking for a known vulnerability, but it does not take advantage of or exploit the vulnerability in any way.
 
-
-
-44- 2020/CVE-2020-6287.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+12- 2020/CVE-2020-6287.json Checker
 (https://github.com//qmakake//SAP_CVE-2020-6287_find_mandate) 
 
 This Bash code is a tool that checks if an account is valid in an SAP WebGUI system. It does this by trying to log into a series of accounts and checking HTTP responses. It is not a “Proof of Concept” (PoC) because it does not demonstrate a vulnerability or exploit a security flaw; rather, it is an account verification tool that tests whether the login credentials provided are valid in the SAP WebGUI system.
 
-
-43-2022/CVE-2022-1386.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+13-2022/CVE-2022-1386.json Checker
 (https://github.com//im-hanzou//fubucker) 
 
 The two Bash scripts are tools for checking the CVE-2022-1386 vulnerability in the Fusion Builder plugin on WordPress sites.
@@ -210,34 +197,8 @@ The second script, “CVE-2022-1386 Mass Vulnerability Checker”, is used to ch
 
 Both scripts are used to check for the presence of the CVE-2022-1386 vulnerability on WordPress sites using the Fusion Builder plugin. They are not exploits; instead, they check the vulnerability and record the results.
 
-
-42-2018/CVE-2018-7600.json Checker and PoC
-(https://github.com//Damian972//drupalgeddon-2) 
- 
-This PHP code is an exploit for the vulnerability CVE-2018-7600, also known as Drupalgeddon or SA-CORE-2018-002, which affected Drupal versions 7.x and 8.x. The vulnerability allowed remote execution of unauthenticated code.
-Here's an overview of what the code does:
-
-1-The code defines a command to be executed on the target server, in this case the command "echo GOOD."
-
-2-It also defines some settings, such as output to file and whether to show the result.
-
-3-Defines payloads for Drupal versions 7.x and 8.x, specifying the URLs and POST parameters required to exploit the vulnerability.
-
-4-There is a function called getVersion($target) that checks whether the target is using Drupal and, if so, what version. This is done by checking the "X-Generator" HTTP header in the HTTP request response.
-
-5-The code prompts the user to enter the destination URL.
-
-6-It checks whether the target is using Drupal and, if so, which version.
-
-7-It then attempts to exploit the vulnerability by sending an HTTP POST request with the payload corresponding to the Drupal version. It uses the cURL function to make this request.
-
-8-If the response contains the string "GOOD," this means the exploit was successful, and the code will report that the target appears to be exploitable. It can also save the target to an output file if configured to do so.
-
-9-The code will display the result of the request, which may include executing the command on the target server.
-
-This code is a real exploit that attempts to exploit the Drupalgeddon vulnerability on a specific target.
-
-41-2016/CVE-2016-8467.json   Checker? Deprecated? Broken link?
+-----------------------------------------------------------------------------------------------------------------------------------------
+14- 2016/CVE-2016-8467.json   Checker? Deprecated? Broken link?
 (https://github.com//roeeh//bootmodechecker)  
 
 It seems like an app developed in Java that checks if your Nexus 6/6P is still vulnerable to CVE-2016-8467 and/or if your bootmode property has been tampered with.
@@ -247,8 +208,8 @@ I can’t say if it is a checker or not because i don’t have a working app to 
 The link for playstore is broken:
 https://play.google.com/store/apps/details?id=roeeh.bootmodechecker
 
-
-40- 2015/CVE-2015-6835.json Checker and PoC
+-----------------------------------------------------------------------------------------------------------------------------------------
+15- 2015/CVE-2015-6835.json Checker and PoC
 (https://github.com//ockeghem//CVE-2015-6835-checker) 
 
 This PHP code is an example of exploitation of a known vulnerability called CVE-2015-6835. To understand what the code does, let's break it down into parts:
@@ -274,8 +235,8 @@ session_destroy() is called to destroy a PHP session.
 
 The main purpose of this code is to demonstrate the vulnerability CVE-2015-6835, which is related to the manipulation of serialized data in PHP sessions. The code exploits this vulnerability by including the serialization of a Class1 class object in the session data and then printing the session state. The result of the execution will be the printout of the message "CVE-2015-6835 vulnerable", implying that the vulnerability was successfully exploited.
 
-
-39- 2021/CVE-2021-36934.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+16- 2021/CVE-2021-36934.json Checker
 (https://github.com//irissentinel//CVE-2021-36934) 
 
 This PowerShell code appears to be a "Checker". It is not malicious code, but rather a tool that scans and, if necessary, patches systems for the known vulnerability CVE-2021-36934, also known as HiveNightmare. I will explain why he is classified as a "Checker":
@@ -294,8 +255,8 @@ This PowerShell code appears to be a "Checker". It is not malicious code, but ra
 
 In short, this PowerShell code is a scan and fix tool that aims to protect systems against the CVE-2021-36934 (HiveNightmare) vulnerability. It is not malicious code, but rather a security tool that helps mitigate a known threat. Therefore, it is classified as a "Checker" due to its security checking and patching nature.
 
-
-38- 2021/CVE-2021-26084.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+17- 2021/CVE-2021-26084.json Checker
 (https://github.com//1ZRR4H//CVE-2021-26084)   
 
 This is a single-line command that checks for the presence of a known vulnerability, CVE-2021-26084, in Atlassian Confluence across multiple servers in bulk. I will explain the command in detail:
@@ -319,8 +280,8 @@ This is a single-line command that checks for the presence of a known vulnerabil
 
 In short, this command reads a list of servers from the "confluence_servers.txt" file, accesses a specific page on each server, and checks whether the page contains a string indicating the CVE-2021-26084 vulnerability. Based on this check, it prints "Vulnerable" in red for vulnerable servers and "OK" in green for non-vulnerable servers. It is a way to mass scan multiple Confluence servers for the presence of this vulnerability.
 
-
-37- 2021/CVE-2021-3129.json ???
+-----------------------------------------------------------------------------------------------------------------------------------------
+18- 2021/CVE-2021-3129.json ???
 (https://github.com//MadExploits//Laravel-debug-Checker) 
 
 This code is very complex and I don't really understand what this code is doing. So, because of that i cant say if its a PoC or a Checker.
@@ -328,9 +289,8 @@ The only information about it is a site that is at README that tells “How to e
 Link:
 https://pentest-tools.com/blog/exploit-rce-vulnerability-laravel-cve-2021-3129 
 
-
-
-36- 2020/CVE-2020-14882.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+19- 2020/CVE-2020-14882.json Checker
 (https://github.com//ovProphet//CVE-2020-14882-checker) 
 
 The code you provided only checks whether the WebLogic server is vulnerable to a specific exploit, but does not perform any actual exploits. Therefore, it is more appropriate to classify it as a "checker".
@@ -359,9 +319,8 @@ In short, this code is designed to check vulnerability in Oracle WebLogic server
 This code as the example of 37 is code is very complex and I don't really understand what this code is doing. So, because of that i cant say if its a PoC or a Checker.
 The README tells “PHPUnit is a unit test framework for the PHP programming language. This is a sample xUnit architecture for a unit testing framework that originated with SUnit and became popular with JUnit. PHPUnit was created by Sebastian Bergmann”. This could be a clue as to what the code does but without being sure I can't say.
 
-
-
-34- 2021/CVE-2021-33560.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+20- 2021/CVE-2021-33560.json Checker
 (https://github.com//IBM//PGP-client-checker-CVE-2021-33560) 
 
 This code is a Python program that aims to check whether an OpenPGP client is vulnerable to a specific vulnerability (CVE-2021-33560) related to the size of the ephemeral secret in a Diffie-Hellman key exchange.
@@ -384,8 +343,8 @@ Here's a summary of how the code works:
 
 The code does this to check whether an OpenPGP client is vulnerable to a vulnerability that affects the size of the ephemeral secret used in Diffie-Hellman key exchanges. It is used to assess whether the client needs to be updated to a more secure version that fixes this specific vulnerability. In short it's a checker.
 
-
-33- 2019/CVE-2019-0708.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+21- 2019/CVE-2019-0708.json Checker
 (https://github.com//davidfortytwo//bluekeep) 
 
 This Python code is a vulnerability scanning utility that checks whether a set of target IP addresses is vulnerable to the vulnerability known as "BlueKeep". The BlueKeep vulnerability is a remote code execution vulnerability that affects Windows systems, specifically Remote Desktop (RDP) functionality.
@@ -410,8 +369,8 @@ Here's a brief explanation of what the code does:
 
 The code checks whether each target IP address is vulnerable to BlueKeep and provides information about the vulnerability status for each target. It is a useful tool for quickly checking which systems may be at risk of exploitation via this specific vulnerability. In short it a checker.
 
-
-32- 2021/CVE-2021-21985.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+22- 2021/CVE-2021-21985.json Checker
 (https://github.com//onSec-fr//CVE-2021-21985-Checker)   
 
 This PowerShell code performs the following actions:
@@ -432,8 +391,8 @@ This PowerShell code performs the following actions:
 
 Basically, the code is used to check whether a given URL has a specific vulnerability. If the HTTP request response contains the word "result", the target is considered to be vulnerable; otherwise, it is considered non-vulnerable. This code can be useful in security testing and checking for vulnerabilities in specific URLs. In short it’s a checker.
 
-
-31- 2022/CVE-2022-4063.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+23- 2022/CVE-2022-4063.json Checker
 (https://github.com//im-hanzou//INPGer) 
 
 The provided code exploits the CVE-2022-4063 vulnerability in InPost Gallery through an LFI (Local File Inclusion) exploit that can lead to RCE (Remote Code Execution). 
@@ -454,8 +413,8 @@ Let's analyze the code to understand how it does this:
 
 The malicious PHP code contained in the payload is responsible for exploiting the LFI vulnerability in InPost Gallery and executing the desired command on the target server. This could allow an attacker to execute arbitrary code on the server, which is an RCE exploit. Therefore, the code demonstrates how the vulnerability can be exploited to execute remote code on the affected server. In short, these are malicious codes because they exploit the vulnerability itself, they not only check whether a server is vulnerable or not.
 
-
-30- 2023/CVE-2023-43654.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+24- 2023/CVE-2023-43654.json Checker
 (https://github.com//OligoCyberSecurity//ShellTorchChecker) 
 
 This code is a script designed to check for the presence of a specific vulnerability in a TorchServe instance. It is neither a Proof of Concept (PoC) nor an exploitation tool; rather, it serves as a checker to determine if the target TorchServe instance is vulnerable to a particular security issue.
@@ -471,8 +430,8 @@ Here's an overview of what the script does:
 
 In summary, this script is used to identify and report vulnerabilities related to TorchServe, providing information on whether specific security issues are present in the target instance. It does not exploit these vulnerabilities or perform any malicious actions. In short this is only a checker.
 
-
-29- 2022/CVE-2022-21449.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+25- 2022/CVE-2022-21449.json Checker
 (https://github.com//Damok82//SignChecker) 
 
 The provided code consists of two parts: a Java program (SignChecker.java) and a batch script (.bat file). These components work together to check for the vulnerability CVE-2022-21449 in different Java versions. Let's break down what each part does and whether they are a Proof of Concept (PoC) or a checker:
@@ -489,8 +448,8 @@ It sets the message and signature variables and then runs the Java program with 
 The batch script can be seen as a checker because it tests whether the Java version is vulnerable to CVE-2022-21449. It does this by running the Java program with a given message and signature and checking the program's behavior.
 In summary, the Java program (SignChecker.java) is a PoC that demonstrates the CVE-2022-21449 vulnerability, while the batch script is a checker that uses the PoC to test different Java versions for the vulnerability. Together, they provide a way to check whether a specific Java version is affected by the vulnerability. In short this is a checker.
 
-
-28- 2014/CVE-2014-0160.json Checker
+-----------------------------------------------------------------------------------------------------------------------------------------
+26- 2014/CVE-2014-0160.json Checker
 (https://github.com//mozilla-services//Heartbleed) 
 
 The provided code consists of multiple components that work together to create a Heartbleed test server and perform testing. Let's break down each part and determine whether they are a checker or a Proof of Concept (PoC):
