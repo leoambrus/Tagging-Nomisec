@@ -471,4 +471,124 @@ The config.json file is not a checker or PoC but provides configuration settings
 The build.sh script is not a checker or PoC but is used to set up the Go environment for running the server.
 Together, these components create a Heartbleed vulnerability checker, allowing users to test for the Heartbleed vulnerability in SSL/TLS implementations. In short it it a Checker.
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+27- 2013/CVE-2013-3827.json CHECKER
 
+The code related to this CVE appears to be a vulnerability verification script that attempts to exploit a specific vulnerability, identified by CVE-2013-3827, on a specified target.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+28- 2022/CVE-2022-0591.json CHECKER
+
+This code is used to check hosts on a network for vulnerability CVE-2017-5689. It does so by sending HTTP requests to various ports on each host and analyzing the responses for a specific banner that indicates the presence of the vulnerability. Hosts found to be vulnerable are listed at the end of the execution.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+29- 2017/CVE-2017-5689.json CHECKER
+
+This script checks if servers at specific IP addresses and port 16992 are vulnerable to attacks related to Intel AMT and similar technologies. If a server is considered vulnerable, its IP is recorded in a specified file.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+30- 2001/CVE-2001-3389.json CHECKER
+
+This script checks for the BEAST vulnerability on a specified remote server using SSL/TLS. It determines if the server is vulnerable based on the encryption used in the SSL/TLS connection. This vulnerability is old and has been widely addressed in modern servers, so most servers won't be vulnerable to BEAST.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+31- 2022/CVE-2022-0492.json CHECKER
+
+This script checks if a Docker container is vulnerable to CVE-2022-0492, which would allow the container to escape its security constraints and gain privileged access to the host system. If the script finds conditions that allow for the escape, it will print a message indicating the container is vulnerable. Otherwise, it will print a message stating that escape in this specific way is not possible.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+32- 2020/CVE-2020-35489.json CHECKER
+
+This script is useful for checking the vulnerability of specific WordPress sites to a known CVE and may be helpful for system administrators and information security professionals looking to identify sites that need to be patched or updated due to this specific vulnerability.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+33- 2022/CVE-2022-27255.json CHECKER
+
+Checks if a server is vulnerable to CVE-2022-27255. This CVE is a vulnerability in Nexxt Solutions Nova300 software version 1.0.16 that can lead to a denial of service (DoS).
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+34- 2022/CVE-2022-47966.json CHECKER
+
+This script is designed to check access logs for evidence of exploitation of CVE-2022-47966. If it finds suspicious entries in the logs, you will be notified of the presence of these entries and potential exploitation of the vulnerability. The output CSV file will contain detailed information about the found entries.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+35- 2023/CVE-2023-25157.json CHECKER
+
+The code is designed to check if a GeoServer is vulnerable to a specific vulnerability and attempts to exploit the vulnerability by sending HTTP requests with different CQL filters for specific resources. It also lists the names of available resources on the GeoServer.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+36- 2020/CVE-2020-12695.json CHECKER
+
+This Python script checks the CVE-2020-12695 vulnerability, known as CallStranger, on Universal Plug and Play (UPnP) devices. The CallStranger vulnerability can be used for malicious purposes, such as data exfiltration, DDoS amplification, and more.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+37- 2019/CVE-2019-7192.json CHECKER
+
+This Python code checks for vulnerability on remote devices using a list of IP addresses and ports from a text file. The code verifies if the devices at each IP/port combination are vulnerable to a specific vulnerability, based on the software version and date on the device.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+38- 2022/CVE-2022-31749.json CHECKER
+
+This is a Bash script that appears to be used to attack a target using SSH and SCP. The script is designed to check the CVE-2022-31749 vulnerability, which seems to be related to WireGuard software.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+39-  2022/CVE-2022-41040.json CHECKER
+
+This is a PowerShell script that checks for Indicators of Compromise (IOCs) related to vulnerabilities CVE-2022-41040 and CVE-2022-41082, which affected Microsoft Exchange Server. The script looks for IOCs in logs and files in specific system locations. IOCs include file names, DLL hashes, malicious IP addresses, and URLs.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+40- 2020/CVE-2020-3952.json PoC
+
+This is a Python script that exploits a known vulnerability (CVE-2020-3952) on VMware vCenter servers to check if the server is vulnerable to this specific CVE. CVE-2020-3952 allowed an attacker with access to the LDAP port of VMware vCenter to execute arbitrary commands as the root user.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+41- 2020/CVE-2020-16898.json CHECKER
+
+This is a PowerShell script that checks if a network interface is vulnerable to vulnerabilities CVE-2020-16898 and CVE-2020-16899. These vulnerabilities are related to IPv6 and affect the TCP/IP protocol on Windows.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+42- 2017/CVE-2017-15361.json CHECKER
+
+A C program that performs checks on large integers (big integers) and verifies if they are divisible by a series of prime numbers and if the result meets certain conditions (checks if specific bits are set or cleared).
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+43- 2020/CVE-2020-15227.json CHECKER
+
+Checks if a website is vulnerable to CVE-2020-15227, a specific vulnerability involving the manipulation of files in certain PHP libraries and functions.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+44- 2023/CVE-2023-0159.json CHECKER
+
+This is a shell script that checks the vulnerability CVE-2023-0159 on websites using Extensive VC Addons for WPBakery Page Builder.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+45- 2019/CVE-2019-18935.json CHECKER
+
+This script is designed to check for the presence of a specific vulnerability related to Telerik Web UI on a list of URLs.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+46- 2023/CVE-2023-23752.json CHECKER
+
+Python script that checks a list of URLs for sensitive configuration information, such as database, user, password, and host, through an HTTP request to a specific endpoint.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+47- 2021/CVE-2021-22986.json PoC
+
+This Python script is a code proof of concept that checks if a target is vulnerable to a specific vulnerability, identified as CVE-2021-22986. The vulnerability is related to F5 BIG-IP devices, allowing for remote code execution without authentication.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+48- 2023/CVE-2023-36884.json CHECKER
+
+This PowerShell script is designed to check specific Registry keys for the correct value to mitigate vulnerability CVE-2023-36884 in various Microsoft applications.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+49- 2020/CVE-2020-5902.json CHECKER
+
+This Python script is a vulnerability verification tool for CVE-2020-5902 in BIG-IP TMUI (Traffic Management User Interface). This vulnerability allowed for remote code execution (RCE) and was exploited in real-world attacks.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+50- 2022/CVE-2022-1388.json CHECKER
+
+Security verification script that checks if the hosts listed in a file are vulnerable to CVE-2022-1388. CVE-2022-1388 is a specific vulnerability identification that, in this case, seems to be related to the exposure of the F5 iControl REST authentication API.
