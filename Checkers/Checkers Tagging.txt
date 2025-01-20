@@ -1,0 +1,1189 @@
+﻿Checkers
+
+
+
+
+O repositório etherleak-checker contém um script em Python projetado para detectar a vulnerabilidade Etherleak (CVE-2003-0001) em um host alvo. Essa vulnerabilidade ocorre quando drivers de rede preenchem inadequadamente os quadros Ethernet com dados residuais da memória do sistema, potencialmente expondo informações sensíveis.
+O script utiliza a biblioteca Scapy para enviar diferentes tipos de solicitações (ICMP, ARP ou TCP) ao host alvo e analisa os dados de preenchimento nos pacotes de resposta para identificar possíveis vazamentos de memória. Portanto, ele interage com a rede durante sua execução. Dependendo do tipo de solicitação enviada, os protocolos utilizados podem incluir ICMP, ARP ou TCP.
+Para utilizar o script, é necessário ter o Python 3.x instalado, além da biblioteca Scapy
+
+
+O repositório CVE-2024-6387_Check contém um script em Python projetado para verificar se servidores estão executando versões vulneráveis do OpenSSH associadas à vulnerabilidade CVE-2024-6387. Essa vulnerabilidade envolve uma condição de corrida no manipulador de sinais do OpenSSH, que pode ser explorada por um invasor remoto não autenticado ao não autenticar dentro de um período de tempo definido.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao tentar se conectar aos servidores alvo para recuperar banners do OpenSSH, a fim de determinar a versão em execução. Por padrão, ele verifica a porta 22, mas permite a especificação de portas alternativas. Portanto, ele utiliza o protocolo SSH (Secure Shell) para estabelecer essas conexões.
+Requisitos:
+Para executar o script, é necessário ter o Python 3.x instalado. Além disso, o script utiliza módulos padrão do Python, como argparse para análise de argumentos de linha de comando e socket para operações de rede. Não há indicação de dependências adicionais específicas no repositório.
+Uso:
+O script permite verificar um ou mais endereços IP, nomes de domínio, arquivos contendo endereços IP ou intervalos de rede em notação CIDR. 
+
+
+O repositório CVE-2009-0473-check contém um script em Python projetado para explorar uma vulnerabilidade de redirecionamento aberto no módulo Rockwell ControlLogix 1756-ENBT/A. Essa vulnerabilidade permite que um invasor redirecione usuários para sites maliciosos sem o seu conhecimento.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao enviar solicitações HTTP ao dispositivo alvo para explorar a vulnerabilidade de redirecionamento aberto. Portanto, ele utiliza o protocolo HTTP durante sua execução.
+Requisitos:
+Para executar o script, é necessário ter o Python 2.7 instalado. Além disso, é necessário estar em um ambiente X Windows, pois o script utiliza a biblioteca webbrowser do Python para abrir o site no navegador padrão.
+Uso:
+O script pode ser executado em um terminal com privilégios de usuário padrão. Para mais detalhes sobre o uso e funcionalidades, consulte o arquivo README no repositório do GitHub.
+
+
+      O repositório CVE-2010-4476-check contém um script em Java destinado a verificar a presença da vulnerabilidade identificada como CVE-2010-4476. Essa vulnerabilidade está relacionada a um problema no método Double.parseDouble do Java Runtime Environment (JRE), que pode causar uma negação de serviço (DoS) ao tentar converter determinadas sequências numéricas em valores de ponto flutuante.
+Utilização de Rede e Protocolos:
+O script não interage com a rede durante sua execução, pois sua finalidade é testar localmente se a implementação do JRE está suscetível à vulnerabilidade CVE-2010-4476. Portanto, não utiliza nenhum protocolo de rede.
+Requisitos:
+Para compilar e executar o script, é necessário ter o Java Development Kit (JDK) instalado no sistema.
+
+
+O repositório CVE-2013-2028_Checker contém um script em Python projetado para verificar se um servidor Nginx é vulnerável à falha identificada como CVE-2013-2028. Essa vulnerabilidade está presente nas versões 1.3.9 até 1.4.0 do Nginx e permite que invasores remotos causem uma negação de serviço (DoS) ou executem código arbitrário por meio de uma solicitação com codificação de transferência em blocos (chunked transfer encoding) contendo um tamanho de bloco excessivamente grande.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao enviar uma solicitação HTTP ao servidor Nginx alvo para determinar sua versão e verificar se está suscetível à vulnerabilidade. Portanto, ele utiliza o protocolo HTTP durante sua execução.
+Requisitos:
+Para executar o script, é necessário ter o Python 3 instalado no sistema. 
+
+
+O repositório heartbleed-checker contém um script em Python destinado a verificar a presença da vulnerabilidade conhecida como Heartbleed, identificada pelo CVE-2014-0160. Essa vulnerabilidade afeta versões específicas da biblioteca OpenSSL, permitindo que atacantes remotos leiam partes da memória de servidores ou clientes, potencialmente expondo informações sensíveis, como chaves privadas e dados de usuários.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao enviar solicitações para o servidor alvo, a fim de determinar se este é vulnerável ao Heartbleed. Durante sua execução, ele utiliza o protocolo TLS/SSL para estabelecer conexões seguras e testar a presença da vulnerabilidade.
+Requisitos:
+Para executar o script, é necessário ter o Python instalado no sistema. Além disso, o script pode depender de bibliotecas específicas para manipulação de conexões TLS/SSL. Recomenda-se verificar o código-fonte ou a documentação fornecida no repositório para identificar quaisquer dependências adicionais e instruções de instalação.
+
+
+Utilização de Rede e Protocolos:
+A extensão interage com a rede ao enviar solicitações aos sites visitados para determinar se eles são vulneráveis ao Heartbleed. Durante sua operação, ela utiliza o protocolo TLS/SSL para estabelecer conexões seguras e testar a presença da vulnerabilidade.
+Requisitos:
+Para utilizar a extensão, é necessário ter o navegador Google Chrome instalado. A instalação da extensão pode ser realizada através do repositório no GitHub, seguindo as instruções fornecidas no mesmo.
+Uso:
+Após a instalação, a extensão verifica automaticamente cada site visitado no Chrome, alertando o usuário caso o site seja vulnerável ao Heartbleed. Para mais detalhes sobre o uso e funcionalidades, consulte o repositório no GitHub.
+Nota Importante:
+É relevante mencionar que algumas extensões similares podem apresentar falsos positivos ou negativos ao verificar a vulnerabilidade Heartbleed. Por exemplo, houve relatos de extensões que indicavam incorretamente que certos sites eram vulneráveis, mesmo após a aplicação de patches de segurança.
+GitHub
+Portanto, recomenda-se cautela ao interpretar os resultados fornecidos por tais ferramentas e, se necessário, utilizar métodos adicionais para confirmar a presença ou ausência da vulnerabilidade.
+
+
+
+
+O repositório HeartBleed-Vulnerability-Checker contém um script em Python projetado para testar automaticamente se sites são vulneráveis ao Heartbleed Bug (CVE-2014-0160). A vulnerabilidade Heartbleed permite que invasores leiam partes da memória de servidores ou clientes, potencialmente expondo informações sensíveis.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao enviar solicitações TLS/SSL para os sites listados em um arquivo de entrada fornecido pelo usuário, a fim de determinar se eles são vulneráveis ao Heartbleed. Portanto, ele utiliza os protocolos TLS/SSL durante sua execução.
+Requisitos:
+Para executar o script, é necessário ter o Python instalado no sistema. Não há indicação de dependências adicionais específicas no repositório.
+
+
+O repositório Nessus_CVE-2014-6271_check disponibiliza um arquivo .audit para o Nessus, destinado a verificar se o Bash está vulnerável à falha CVE-2014-6271, conhecida como "Shellshock". Essa vulnerabilidade permite que invasores executem comandos arbitrários no sistema afetado, explorando variáveis de ambiente malformadas.
+Utilização de Rede e Protocolos:
+O arquivo .audit é utilizado pelo Nessus durante a execução de uma auditoria de segurança. O Nessus, ao realizar a auditoria, pode interagir com a rede para se conectar aos sistemas alvo e verificar a presença da vulnerabilidade. Portanto, dependendo da configuração e do escopo da auditoria, protocolos como SSH ou outros podem ser utilizados para essa comunicação.
+Requisitos:
+Para utilizar este arquivo .audit, é necessário ter o Nessus instalado e configurado no sistema. O arquivo deve ser integrado ao Nessus conforme as diretrizes de uso de arquivos .audit da ferramenta.
+Uso:
+Após a integração do arquivo .audit ao Nessus, configure uma varredura direcionada aos sistemas que deseja auditar. Certifique-se de que o plugin correspondente à verificação da CVE-2014-6271 esteja habilitado. O Nessus realizará a auditoria e reportará se os sistemas analisados estão vulneráveis à "Shellshock".
+Referências Adicionais:
+* Para mais informações sobre a vulnerabilidade CVE-2014-6271, consulte o National Vulnerability Database (NVD).
+* A Agência de Segurança Cibernética e Infraestrutura dos EUA (CISA) também publicou um alerta detalhado sobre essa vulnerabilidade: GNU Bourne-Again Shell (Bash) 'Shellshock' Vulnerability (CVE-2014-6271).
+Para mais detalhes sobre a utilização do arquivo .audit, consulte o repositório no GitHub.
+
+
+O repositório FreakVulnChecker disponibiliza um script em Bash que verifica se servidores estão aceitando cipher suites de exportação, o que os tornaria vulneráveis à falha CVE-2015-0204, conhecida como ataque FREAK. Essa vulnerabilidade permite que atacantes forcem a utilização de criptografia fraca durante a comunicação, possibilitando a interceptação e decodificação de dados sensíveis.
+Utilização de Rede e Protocolos:
+O script interage com a rede ao estabelecer conexões TLS/SSL com os servidores especificados, testando a aceitação de cipher suites de exportação. Para isso, utiliza o protocolo TLS/SSL durante sua execução.
+Requisitos:
+Para executar o script, é necessário ter o Bash e o OpenSSL instalados no sistema. O script utiliza o comando openssl para testar as cipher suites suportadas pelos servidores alvo.
+
+
+O repositório GHOSTCHECK-cve-2015-0235 contém um script em Bash projetado para verificar se um sistema Linux está vulnerável à falha CVE-2015-0235, conhecida como "GHOST". Essa vulnerabilidade afeta versões específicas da biblioteca GNU C Library (glibc) e permite que atacantes executem código arbitrário em sistemas afetados.
+Utilização de Rede e Protocolos:
+O script não interage diretamente com a rede nem utiliza protocolos de comunicação. Sua função é verificar a versão da glibc instalada no sistema local para determinar se ele está vulnerável à falha "GHOST".
+Requisitos:
+Para executar o script, é necessário ter o Bash instalado no sistema. Não há indicação de dependências adicionais específicas no repositório.
+
+
+O repositório GHOSTCHECK-cve-2015-0235 disponibiliza um script em Python que verifica se um sistema Linux está vulnerável à falha CVE-2015-0235, conhecida como "GHOST". Essa vulnerabilidade afeta versões específicas da biblioteca GNU C Library (glibc) e permite que atacantes executem código arbitrário em sistemas afetados.
+Utilização de Rede e Protocolos:
+O script não interage diretamente com a rede nem utiliza protocolos de comunicação. Sua função é verificar a versão da glibc instalada no sistema local para determinar se ele está vulnerável à falha "GHOST".
+Requisitos:
+Para executar o script, é necessário ter o Python 2.6 ou superior instalado no sistema. Além disso, a biblioteca Fabric é necessária para a execução remota em múltiplos hosts.
+
+
+O repositório ghost-checker disponibiliza um utilitário em C projetado para verificar se um sistema está vulnerável à falha CVE-2015-0235, conhecida como "GHOST". Essa vulnerabilidade afeta versões específicas da biblioteca GNU C Library (glibc) e permite que atacantes executem código arbitrário em sistemas afetados.
+Utilização de Rede e Protocolos:
+O utilitário não interage diretamente com a rede nem utiliza protocolos de comunicação. Sua função é verificar a versão da glibc instalada no sistema local para determinar se ele está vulnerável à falha "GHOST".
+Requisitos:
+Para compilar e executar o utilitário, é necessário ter um compilador C instalado no sistema. O repositório fornece um arquivo Makefile para facilitar o processo de compilação.
+
+
+
+
+O repositório conscryptchecker disponibiliza um aplicativo Android que verifica se o dispositivo está vulnerável às falhas CVE-2015-3825 e CVE-2015-3837, conhecidas coletivamente como "One Class to Rule Them All". Essas vulnerabilidades estavam presentes na classe OpenSSLX509Certificate da biblioteca Conscrypt, utilizada para manipulação de certificados X.509.
+Utilização de Rede e Protocolos:
+O aplicativo não interage diretamente com a rede nem utiliza protocolos de comunicação durante sua execução. Sua função é verificar a presença da classe vulnerável no sistema local do dispositivo.
+Requisitos:
+Para compilar e executar o aplicativo, é necessário ter o Android Studio instalado. Além disso, é preciso adicionar o arquivo google-services.json ao projeto para configurar os serviços do Firebase, conforme indicado no repositório.
+Uso:
+Após a configuração e compilação do aplicativo, é possível instalá-lo em um dispositivo Android. Ao executá-lo, o aplicativo verificará se o dispositivo contém a classe OpenSSLX509Certificate vulnerável, informando o usuário sobre a presença ou ausência da vulnerabilidade.
+Referências Adicionais:
+Para mais informações sobre as vulnerabilidades CVE-2015-3825 e CVE-2015-3837, consulte o National Vulnerability Database (NVD) e o Google Security Blog.
+Para detalhes adicionais sobre o uso e funcionalidades do aplicativo, consulte o repositório no GitHub.
+O repositório CVE-2015-6835-checker disponibiliza um script em PHP projetado para verificar se um sistema está vulnerável à falha CVE-2015-6835. Essa vulnerabilidade afeta versões anteriores do PHP e permite que atacantes executem código arbitrário ou causem uma negação de serviço (use-after-free) por meio de conteúdo de sessão manipulado.
+Utilização de Rede e Protocolos:
+O script não interage diretamente com a rede nem utiliza protocolos de comunicação. Sua função é verificar a manipulação de sessões no sistema local para determinar se ele está vulnerável à falha CVE-2015-6835.
+Requisitos:
+Para executar o script, é necessário ter o PHP instalado no sistema. O repositório fornece um arquivo PHP que pode ser executado diretamente
+O repositório ansible_CVE-2016-5195_check disponibiliza um playbook do Ansible projetado para verificar se um sistema está vulnerável à falha CVE-2016-5195, conhecida como "Dirty COW". Essa vulnerabilidade afeta versões anteriores do kernel do Linux e permite que atacantes locais escalem privilégios para obter acesso root.
+Utilização de Rede e Protocolos:
+O playbook não interage diretamente com a rede nem utiliza protocolos de comunicação durante sua execução. Sua função é verificar a presença da vulnerabilidade no sistema local, sem a necessidade de comunicação externa.
+Requisitos:
+Para executar o playbook, é necessário ter o Ansible instalado no sistema. Além disso, o repositório fornece um arquivo hosts de exemplo para facilitar a configuração do inventário de hosts.
+
+
+O repositório CheckFlashPlayerVersion disponibiliza um arquivo HTML que permite verificar a versão do Adobe Flash Player instalada no navegador, a fim de identificar se está vulnerável à falha CVE-2016-7855.
+Utilização de Rede e Protocolos:
+O arquivo HTML utiliza JavaScript para acessar informações sobre o Flash Player instalado no navegador. Essa abordagem pode envolver a comunicação com o servidor para obter informações sobre a versão do Flash Player, mas não utiliza protocolos de rede adicionais além do HTTP/HTTPS.
+Requisitos:
+Para utilizar a ferramenta, é necessário ter um navegador com suporte ao Adobe Flash Player. No entanto, é importante notar que o Adobe Flash Player foi descontinuado e removido de muitos navegadores modernos devido a questões de segurança.
+
+
+O repositório bootmodechecker disponibiliza um aplicativo Android que verifica se dispositivos Nexus 6 ou Nexus 6P estão vulneráveis à falha CVE-2016-8467 e se a propriedade de inicialização (bootmode) foi adulterada.
+Utilização de Rede e Protocolos:
+O aplicativo não interage diretamente com a rede nem utiliza protocolos de comunicação durante sua execução. Sua função é verificar localmente as propriedades do sistema para determinar a vulnerabilidade e a integridade da inicialização.
+Requisitos:
+Para compilar e executar o aplicativo, é necessário ter o Android Studio instalado.
+
+
+O repositório Etern-blue-Windows-7-Checker disponibiliza uma ferramenta que verifica se um sistema Windows 7 está vulnerável ao exploit EternalBlue (CVE-2017-0143). Este exploit, desenvolvido pela NSA, afeta versões do Windows, incluindo o Windows 7, e pode ser utilizado para ataques como o WannaCry.
+Utilização de Rede e Protocolos:
+A ferramenta envia pacotes SMB para o host alvo para verificar a vulnerabilidade. O protocolo utilizado é o SMB (Server Message Block), que é um protocolo de rede utilizado para compartilhamento de arquivos e impressoras em redes Windows.
+Requisitos:
+Para compilar e executar a ferramenta, é necessário ter um ambiente de desenvolvimento C++ configurado. O repositório inclui arquivos de código-fonte em C++ e C, além de scripts de construção para diferentes sistemas operacionais.
+
+
+O repositório rocacheck disponibiliza um pacote em Go que implementa o algoritmo de impressão digital de chaves para verificar se uma chave RSA foi gerada por código defeituoso da Infineon e se é vulnerável à fatoração via o ataque Return of Coppersmith's Attack (ROCA) / CVE-2017-15361.
+GitHub
+Utilização de Rede e Protocolos:
+O pacote rocacheck não interage diretamente com a rede nem utiliza protocolos de comunicação durante sua execução. Sua função é analisar localmente chaves RSA para determinar se são vulneráveis ao ataque ROCA.
+Requisitos:
+Para utilizar o pacote rocacheck, é necessário ter o Go instalado no sistema.
+
+
+O repositório check_struts disponibiliza um script em shell que auxilia na identificação de versões e localizações das bibliotecas do Apache Struts presentes em um sistema. Este script pode ser executado diretamente em um servidor ou através de um playbook do Ansible para gerenciar múltiplos servidores simultaneamente.
+GitHub
+Utilização de Rede e Protocolos:
+O script check_struts.sh não realiza interações de rede nem utiliza protocolos de comunicação durante sua execução. Sua função é localizar e identificar as bibliotecas do Apache Struts presentes no sistema local, sem a necessidade de comunicação externa.
+Requisitos:
+Para utilizar o script, é necessário ter acesso ao sistema onde se deseja realizar a verificação. Não há requisitos adicionais, como a instalação de ferramentas específicas, além do próprio shell para execução do script.
+
+
+O repositório CVE-2017-5689-Checker disponibiliza uma ferramenta automatizada para verificar a vulnerabilidade CVE-2017-5689, que permite contornar a autenticação no painel do Intel Active Management Technology (AMT).
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo HTTP para enviar requisições ao painel do AMT, verificando a presença da vulnerabilidade.
+Requisitos:
+* Python 3
+* Bibliotecas especificadas no arquivo requirements.txt
+
+
+O repositório SpecuCheck disponibiliza uma ferramenta para Windows que verifica o estado das mitigations de software e hardware contra vulnerabilidades como Meltdown (CVE-2017-5754), Spectre v2 (CVE-2017-5715), Foreshadow (CVE-2018-3260) e Spectre v4 (CVE-2018-3639).
+Utilização de Rede e Protocolos:
+A ferramenta não realiza interações de rede nem utiliza protocolos de comunicação durante sua execução. Ela analisa localmente o sistema para determinar o estado das mitigations.
+Requisitos:
+Para compilar e executar o SpecuCheck, é necessário ter o Microsoft Visual Studio instalado, pois o projeto é desenvolvido em C.
+
+
+O repositório iBall-UTStar-CVEChecker disponibiliza um script em Python que verifica a presença de vulnerabilidades de bypass de autenticação e divulgação de informações em dispositivos iBall e UTStar. As vulnerabilidades abordadas são:
+* CVE-2017-6558
+* CVE-2017-14243
+* CVE-2017-14244
+Utilização de Rede e Protocolos:
+O script realiza requisições HTTP para os dispositivos alvo, verificando a presença das vulnerabilidades mencionadas. Portanto, utiliza o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Bibliotecas especificadas no arquivo requirements.txt
+
+
+O repositório SpecuCheck disponibiliza uma ferramenta para Windows que verifica o estado das mitigations de software e hardware contra vulnerabilidades como Meltdown (CVE-2017-5754), Spectre v2 (CVE-2017-5715), Foreshadow (CVE-2018-3260) e Spectre v4 (CVE-2018-3639).
+Utilização de Rede e Protocolos:
+A ferramenta não realiza interações de rede nem utiliza protocolos de comunicação durante sua execução. Ela analisa localmente o sistema para determinar o estado das mitigations.
+Requisitos:
+Para compilar e executar o SpecuCheck, é necessário ter o Microsoft Visual Studio instalado, pois o projeto é desenvolvido em C.
+
+
+O repositório check_icmp_dos-CVE-2018-4407- disponibiliza um script em Python que demonstra a vulnerabilidade CVE-2018-4407, permitindo a execução de um ataque de negação de serviço (DoS) em dispositivos Apple afetados.
+Utilização de Rede e Protocolos:
+O script utiliza o protocolo ICMP para enviar pacotes maliciosos aos dispositivos alvo, explorando a vulnerabilidade para causar falhas no sistema.
+Requisitos:
+* Python 3
+* Biblioteca Scapy
+
+
+O repositório CVE-2018-7600-Masschecker disponibiliza uma ferramenta em Python para verificar a vulnerabilidade CVE-2018-7600, conhecida como "Drupalgeddon 2", em múltiplas URLs.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para os sites alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Bibliotecas requests e argparse
+
+
+
+
+O repositório drupal-check disponibiliza um script em Shell para análise de logs do Apache, visando identificar sinais de exploração da vulnerabilidade CVE-2018-7600, conhecida como "Drupalgeddon 2".
+Utilização de Rede e Protocolos:
+O script analisa os logs do Apache em busca de padrões que indicam tentativas de exploração da vulnerabilidade, sem realizar interações de rede ou utilizar protocolos de comunicação.
+Requisitos:
+* Acesso aos arquivos de log do Apache
+
+
+O repositório CVE-2018-9995_check disponibiliza um script em Python para a detecção em massa da vulnerabilidade CVE-2018-9995 em dispositivos de câmeras DVR.
+Utilização de Rede e Protocolos:
+O script realiza requisições HTTP para os dispositivos alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Arquivo host.txt contendo uma lista de endereços IP ou domínios dos dispositivos a serem verificados
+
+
+O repositório Check-vuln-CVE-2019-0708 disponibiliza uma ferramenta para verificar a vulnerabilidade CVE-2019-0708, conhecida como "BlueKeep", em sistemas Windows.
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo RDP (Remote Desktop Protocol) para se comunicar com os sistemas alvo, realizando requisições para identificar a vulnerabilidade.
+Requisitos:
+* Sistema operacional Linux
+* Ferramentas git e make
+* Biblioteca libssl-dev
+* Ferramenta rdesktop
+
+
+
+
+O repositório CVE-2019-0708-Check-Device-Patch-Status disponibiliza um script em PowerShell para verificar se um dispositivo específico foi corrigido para a vulnerabilidade CVE-2019-0708, conhecida como "BlueKeep".
+Utilização de Rede e Protocolos:
+O script não realiza interações de rede; ele verifica localmente a versão do arquivo termdd.sys no sistema alvo.
+Requisitos:
+* Sistema operacional Windows
+* Permissões administrativas para acessar arquivos do sistema
+
+
+O repositório check-your-pulse disponibiliza uma ferramenta para identificar indicadores de comprometimento (IOCs) nos arquivos de log de um dispositivo Pulse Secure VPN, relacionados à vulnerabilidade CVE-2019-11510.
+Utilização de Rede e Protocolos:
+A ferramenta analisa localmente os arquivos de log, sem realizar interações de rede ou utilizar protocolos de comunicação.
+Requisitos:
+* Python 3
+* Acesso aos arquivos de log do Pulse Secure VPN
+
+
+O repositório chanleakcheck disponibiliza uma ferramenta para verificar se seu nó lnd foi alvo da vulnerabilidade CVE-2019-12999, que permitia a criação de canais inválidos, resultando em perda de fundos.
+Utilização de Rede e Protocolos:
+A ferramenta se comunica com o nó lnd utilizando o protocolo gRPC, que é o método padrão de comunicação para interações com o lnd.
+Requisitos:
+* Go 1.12 ou superior
+* Acesso ao nó lnd a ser verificado
+
+
+O repositório CVE-2019-18935-checker disponibiliza um script em Python para verificar a vulnerabilidade CVE-2019-18935, que afeta o Telerik UI para ASP.NET AJAX, permitindo execução remota de código.
+Utilização de Rede e Protocolos:
+O script realiza requisições HTTP para o servidor alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Biblioteca requests
+
+
+
+
+O repositório check-cve-2019-19781 disponibiliza uma ferramenta para verificar se um host está vulnerável à CVE-2019-19781, uma falha crítica de execução remota de código no Citrix Application Delivery Controller (ADC) e Citrix Gateway.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para o servidor alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Biblioteca requests
+
+
+O repositório CVE-NetScalerFileSystemCheck disponibiliza scripts para verificar se um dispositivo Citrix NetScaler foi comprometido pela vulnerabilidade CVE-2019-19781, permitindo a execução remota de código.
+Utilização de Rede e Protocolos:
+Os scripts utilizam SSH para se conectar ao dispositivo NetScaler e realizar verificações no sistema de arquivos.
+Requisitos:
+* Para o script PowerShell (CVE-NetScalerFileSystemCheck.ps1):
+   * plink.exe no diretório de execução.
+   * Acesso SSH ao dispositivo NetScaler.
+   * Permissões adequadas para leitura dos arquivos e diretórios especificados.
+* Para o script Shell (CVE-NetScalerFileSystemCheck.sh):
+   * Acesso direto ao dispositivo NetScaler, por exemplo, via /var/tmp/.
+   * Permissões adequadas para leitura dos arquivos e diretórios especificados.
+
+
+
+
+O repositório CVE-2019-19781-Checker oferece uma ferramenta para verificar se um serviço está vulnerável à CVE-2019-19781, uma falha crítica de execução remota de código no Citrix Application Delivery Controller (ADC) e Citrix Gateway.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para o servidor alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Acesso ao serviço a ser verificado.
+Uso:
+1. Acesse o site Citrix Checker.
+2. Insira o endereço do seu serviço na interface fornecida.
+3. O site informará se o seu serviço está vulnerável à CVE-2019-19781.
+Nota: Recomenda-se realizar a verificação duas vezes para garantir a precisão dos resultados.
+Mitigação:
+Para mitigar a vulnerabilidade, siga os seguintes passos:
+1. Acesse o console do Citrix ADC ou utilize uma ferramenta SSH, como o PuTTY, para se conectar ao dispositivo.
+2. Faça login com as credenciais padrão:
+   * Nome de usuário: nsroot
+   * Senha: nsroot
+
+
+O repositório citrixvulncheck oferece uma ferramenta para verificar se um dispositivo Citrix Application Delivery Controller (ADC) ou Citrix Gateway está vulnerável à CVE-2019-19781, uma falha crítica de execução remota de código.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para o servidor alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Biblioteca requests
+
+
+
+
+O repositório check_CVE-2019-3462 disponibiliza ferramentas para verificar se sistemas Debian ou Ubuntu estão vulneráveis à CVE-2019-3462, uma falha crítica no APT que pode permitir a execução remota de código.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para o servidor alvo, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Acesso ao sistema Debian ou Ubuntu a ser verificado.
+
+
+O repositório cve-2019-7192-check disponibiliza uma ferramenta para verificar se dispositivos QNAP NAS estão vulneráveis à CVE-2019-7192, uma falha crítica de execução remota de código sem autenticação.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para os dispositivos QNAP NAS, utilizando o protocolo HTTP para comunicação.
+Requisitos:
+* Python 3
+* Biblioteca requests
+
+
+O repositório SMBGhost_CVE-2020-0796_checker disponibiliza uma ferramenta para verificar se sistemas Windows estão vulneráveis à CVE-2020-0796, conhecida como vulnerabilidade SMBGhost.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições SMB (Server Message Block) para os sistemas alvo, utilizando o protocolo SMB para comunicação.
+Requisitos:
+* Python 3
+* Biblioteca smbprotocol
+
+
+
+
+O repositório CVE-2020-0796-Checker disponibiliza um script para verificar se sistemas estão vulneráveis à CVE-2020-0796, conhecida como SMBGhost.
+Utilização de Rede e Protocolos:
+O script utiliza o protocolo SMB (Server Message Block) para comunicação com o sistema alvo.
+Requisitos:
+* Sistema operacional Linux
+* Ferramenta nmap
+
+
+O repositório GUI-Check-CVE-2020-0976 disponibiliza uma ferramenta gráfica para verificar se sistemas Windows estão vulneráveis à CVE-2020-0976, uma falha crítica no protocolo SMBv3 que pode permitir a execução remota de código sem autenticação.
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo SMB (Server Message Block) para comunicação com o sistema alvo.
+Requisitos:
+* Sistema operacional Windows
+* Python 3
+* Biblioteca tkinter para a interface gráfica
+
+
+O repositório salt-rce-scanner-CVE-2020-11651-CVE-2020-11652 disponibiliza uma ferramenta para verificar se sistemas SaltStack estão vulneráveis às falhas CVE-2020-11651 e CVE-2020-11652, que podem permitir execução remota de código sem autenticação.
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo TCP para se comunicar com o servidor SaltStack na porta 4505, que é a porta padrão para o "request server" do Salt.
+Requisitos:
+* Python 2.7 ou Python 3
+* Bibliotecas externas especificadas no arquivo requirements.txt
+
+
+O repositório ZeroLogon-Exploitation-Check disponibiliza um script em PowerShell para verificar se um domínio está vulnerável à CVE-2020-1472, conhecida como ZeroLogon.
+Utilização de Rede e Protocolos:
+O script utiliza o protocolo Netlogon para se comunicar com os controladores de domínio, requerendo privilégios administrativos para acessar os logs de segurança e sistema.
+Requisitos:
+* Acesso administrativo aos controladores de domínio
+
+
+
+
+O repositório CVE-2020-1472_ZeroLogonChecker disponibiliza uma ferramenta em C# para verificar se sistemas estão vulneráveis à CVE-2020-1472, conhecida como ZeroLogon.
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo Netlogon para se comunicar com os controladores de domínio, requerendo privilégios administrativos para acessar os logs de segurança e sistema.
+Requisitos:
+* Acesso administrativo aos controladores de domínio
+
+
+O repositório CVE-2020-14882-checker disponibiliza uma ferramenta para verificar se sistemas Oracle WebLogic Server estão vulneráveis à CVE-2020-14882, uma falha crítica que permite execução remota de código sem autenticação.
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo HTTP para se comunicar com o servidor WebLogic na porta 7001, que é a porta padrão para o console administrativo do WebLogic.
+Requisitos:
+* Ferramenta curl instalada no sistema
+
+
+
+
+O repositório CVE-2020-16898_Checker disponibiliza uma ferramenta para verificar se sistemas Windows estão vulneráveis à CVE-2020-16898, conhecida como "Bad Neighbor".
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo ICMPv6 para enviar pacotes de solicitação de vizinhança (Neighbor Solicitation) com opções específicas, visando identificar a vulnerabilidade.
+Requisitos:
+* Python 3.x
+* Bibliotecas scapy e socket
+
+
+O repositório CVE-2020-16898_Check disponibiliza um script em PowerShell para verificar se interfaces de rede em sistemas Windows estão vulneráveis à CVE-2020-16898, conhecida como "Bad Neighbor".
+Utilização de Rede e Protocolos:
+O script utiliza o protocolo ICMPv6 para enviar pacotes de solicitação de vizinhança (Neighbor Solicitation) com opções específicas, visando identificar a vulnerabilidade.
+Requisitos:
+* PowerShell 5.1 ou superior
+
+
+O repositório tomcat-cve-2020-1938-check disponibiliza uma ferramenta em Go para verificar se servidores Apache Tomcat estão vulneráveis à CVE-2020-1938, conhecida como "Ghostcat".
+Utilização de Rede e Protocolos:
+A ferramenta utiliza o protocolo AJP (Apache JServ Protocol) na porta 8009, que é a porta padrão para o conector AJP do Tomcat.
+Requisitos:
+* Go 1.14 ou superior
+
+
+
+
+O repositório Check-WP-CVE-2020-35489 disponibiliza um script em Python para verificar se sites WordPress estão vulneráveis à CVE-2020-35489, uma falha crítica no plugin Contact Form 7 que permite o upload não restrito de arquivos, potencialmente comprometendo a segurança do site.
+Utilização de Rede e Protocolos:
+O script realiza requisições HTTP para identificar a versão do Contact Form 7 instalada e determinar se o site está vulnerável.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests e argparse
+
+
+O repositório wp_CVE-2020-35489_checker disponibiliza uma ferramenta em Python para verificar se sites WordPress estão vulneráveis à CVE-2020-35489, uma falha crítica no plugin Contact Form 7 que permite o upload não restrito de arquivos, potencialmente comprometendo a segurança do site.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para identificar a versão do Contact Form 7 instalada e determinar se o site está vulnerável.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests e argparse
+
+
+O repositório CVE-2020-5902-Vuln-Checker disponibiliza uma ferramenta em Python para verificar se dispositivos F5 BIG-IP estão vulneráveis à CVE-2020-5902, uma falha crítica que permite a execução remota de código (RCE) através da interface de gerenciamento.
+Utilização de Rede e Protocolos:
+A ferramenta realiza requisições HTTP para a interface de gerenciamento do F5 BIG-IP, verificando a presença de indicadores de comprometimento associados à vulnerabilidade.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests
+
+
+O repositório cve-2020-5902-ioc-bigip-checker disponibiliza um script em Python projetado para identificar Indicadores de Comprometimento (IoCs) associados à vulnerabilidade CVE-2020-5902 em dispositivos F5 BIG-IP.
+Objetivo:
+O script examina o sistema F5 BIG-IP em busca de IoCs conhecidos relacionados à CVE-2020-5902, fornecendo um relatório que auxilia na determinação das ações necessárias.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests
+
+
+O repositório checkvulnCVE20205902 disponibiliza um script em PowerShell projetado para verificar a vulnerabilidade CVE-2020-5902 em uma lista de endereços IP.
+Objetivo:
+O script permite que administradores de sistemas avaliem rapidamente múltiplos dispositivos F5 BIG-IP para identificar se estão expostos à vulnerabilidade CVE-2020-5902, facilitando a priorização de ações corretivas.
+Requisitos:
+* PowerShell 3.0 ou superior
+
+
+
+
+O repositório checker-CVE-2020-5902 disponibiliza um script em Python projetado para verificar se dispositivos F5 BIG-IP estão vulneráveis à CVE-2020-5902, uma falha crítica que permite a execução remota de código (RCE) através da interface de gerenciamento.
+Objetivo:
+O script permite que administradores de sistemas avaliem rapidamente se seus dispositivos F5 BIG-IP estão expostos à vulnerabilidade CVE-2020-5902, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.7 ou superior
+
+
+
+
+O repositório CVE-2021-21985-Checker disponibiliza um script em PowerShell para verificar se um servidor VMware vCenter está vulnerável à CVE-2021-21985, uma falha crítica de execução remota de código (RCE) no vSphere Client (HTML5).
+Objetivo:
+O script permite que administradores de sistemas avaliem rapidamente se seus servidores vCenter estão expostos à vulnerabilidade CVE-2021-21985, facilitando a priorização de ações corretivas.
+Requisitos:
+* PowerShell 3.0 ou superior
+
+
+
+
+O repositório VMWare-CVE-Check disponibiliza scripts em Python e Bash para verificar a vulnerabilidade CVE-2021-22005 no VMware vCenter Server.
+Objetivo:
+Permitir que administradores de sistemas avaliem rapidamente se seus servidores vCenter estão expostos à CVE-2021-22005, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x ou Bash
+
+
+O repositório CVE-2021-22986_Check disponibiliza um script em Python 3 para verificar se um servidor F5 BIG-IP está vulnerável à CVE-2021-22986, uma falha crítica de execução remota de código (RCE) na interface iControl REST.
+Objetivo:
+Permitir que administradores de sistemas avaliem rapidamente se seus servidores F5 BIG-IP estão expostos à CVE-2021-22986, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+O repositório Check-CVE-2021-23383 disponibiliza um script em Python para verificar se a biblioteca Handlebars utilizada em um projeto está vulnerável à CVE-2021-23383, uma falha crítica de poluição de protótipo.
+Objetivo:
+Permitir que desenvolvedores e administradores de sistemas avaliem rapidamente se seus projetos estão expostos à CVE-2021-23383, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+O repositório conflucheck disponibiliza um script em Python 3 projetado para identificar a vulnerabilidade CVE-2021-26084 no Atlassian Confluence, uma falha crítica de execução remota de código (RCE) que afeta versões anteriores à 7.4.13, 7.13.3 e 6.15.0.
+Objetivo:
+Permitir que administradores de sistemas avaliem rapidamente se seus servidores Confluence estão expostos à CVE-2021-26084, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+
+
+O repositório CVE-2021-30357_CheckPoint_SNX_VPN_PoC disponibiliza um proof-of-concept (PoC) para a vulnerabilidade CVE-2021-30357, que permite a leitura privilegiada de arquivos através do cliente Linux do CheckPoint SNX VPN.
+Objetivo:
+Demonstrar a exploração da CVE-2021-30357, permitindo que administradores de sistemas avaliem rapidamente se seus servidores estão expostos a essa vulnerabilidade, facilitando a priorização de ações corretivas.
+Requisitos:
+* Sistema Linux com o cliente SNX VPN da CheckPoint instalado.
+
+
+O repositório Laravel-debug-Checker disponibiliza um script em Python para verificar se uma aplicação Laravel está vulnerável à CVE-2021-3129, uma falha crítica de execução remota de código (RCE) relacionada ao uso inadequado do modo de depuração.
+Objetivo:
+Permitir que administradores de sistemas e desenvolvedores avaliem rapidamente se suas aplicações Laravel estão expostas à CVE-2021-3129, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+O repositório CVE-2021-3156-checker disponibiliza um script em Python para verificar se o sistema está vulnerável à CVE-2021-3156, conhecida como "Baron Samedit".
+Objetivo:
+Permitir que administradores de sistemas avaliem rapidamente se seus sistemas estão expostos à CVE-2021-3156, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+O repositório PGP-client-checker-CVE-2021-33560 disponibiliza uma ferramenta para verificar se seu cliente OpenPGP está vulnerável à CVE-2021-33560.
+Objetivo:
+Permitir que administradores de sistemas e usuários avaliem rapidamente se seus clientes OpenPGP estão expostos à CVE-2021-33560, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.8 ou superior.
+
+
+O repositório CVE-2021-3441-check disponibiliza um script em Python para verificar se sistemas estão vulneráveis à CVE-2021-3441, uma falha de Cross-Site Scripting (XSS) armazenada não autenticada no HP OfficeJet.
+Objetivo:
+Permitir que administradores de sistemas e profissionais de segurança avaliem rapidamente se seus dispositivos HP OfficeJet estão expostos à CVE-2021-3441, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+
+
+O repositório CheckHKRCE disponibiliza uma ferramenta para verificar se dispositivos Hikvision estão vulneráveis à CVE-2021-36260, uma falha de execução remota de código (RCE) crítica.
+Objetivo:
+Permitir que administradores de sistemas e profissionais de segurança avaliem rapidamente se seus dispositivos Hikvision estão expostos à CVE-2021-36260, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.8 ou superior
+* Biblioteca requests instalada
+* Sistemas operacionais Windows 10 ou Linux (Ubuntu)
+
+
+
+
+O repositório Check-AAD-Connect-for-CVE-2021-36949-vulnerability disponibiliza um script em PowerShell para verificar se o Azure AD Connect está vulnerável à CVE-2021-36949, uma falha de bypass de autenticação.
+Objetivo:
+Permitir que administradores de sistemas avaliem rapidamente se suas instalações do Azure AD Connect estão expostas à CVE-2021-36949, facilitando a priorização de ações corretivas.
+Requisitos:
+* PowerShell 5.1 ou superior
+* Azure AD Connect instalado
+
+
+O repositório lsm_bpf_check_argc0 disponibiliza um módulo LSM BPF projetado para bloquear exploits semelhantes ao pwnkit, como a CVE-2021-4034.
+Objetivo:
+Impedir a execução de programas com argc == 0, uma técnica explorada em vulnerabilidades como o pwnkit.
+Requisitos:
+* Kernel Linux 5.8 ou superior
+* Ferramentas de desenvolvimento como clang, bpftool e libbpf-devel
+
+
+
+
+O repositório apache-httpd-path-traversal-checker disponibiliza uma ferramenta em Python para verificar vulnerabilidades de path traversal no Apache HTTP Server, especificamente as CVEs CVE-2021-41773 e CVE-2021-42013.
+Objetivo:
+Permitir que administradores de sistemas e profissionais de segurança avaliem rapidamente se seus servidores Apache estão expostos a essas vulnerabilidades, facilitando a priorização de ações corretivas.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests e ssl
+
+
+O repositório Simple-CVE-2021-41773-checker disponibiliza uma ferramenta em Python para verificar se servidores Apache HTTP estão vulneráveis à CVE-2021-41773, uma falha de path traversal que permite o acesso não autorizado a arquivos fora do diretório raiz do servidor.
+Objetivo:
+Facilitar a identificação de servidores Apache vulneráveis à CVE-2021-41773, permitindo que administradores de sistemas e profissionais de segurança priorizem ações corretivas.
+Requisitos:
+* Python 3.x
+* Biblioteca requests instalada
+
+
+
+
+O repositório Log4J_checker disponibiliza uma ferramenta em Python para verificar se servidores estão vulneráveis à CVE-2021-44228, conhecida como Log4Shell, uma falha crítica na biblioteca de logging Log4j2.
+Objetivo:
+Facilitar a identificação de servidores vulneráveis à CVE-2021-44228, permitindo que administradores de sistemas e profissionais de segurança priorizem ações corretivas.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests e ssl
+
+
+O repositório how-to-check-patch-secure-log4j-CVE-2021-44228 serve como um hub de informações sobre a vulnerabilidade CVE-2021-44228, conhecida como Log4Shell, que afeta a biblioteca de logging Log4j2.
+Objetivo:
+Fornecer recursos e orientações para verificar e corrigir a vulnerabilidade CVE-2021-44228 em sistemas que utilizam o Log4j2.
+Conteúdo Principal:
+* Informações sobre a Vulnerabilidade: Explicações detalhadas sobre o que é o Log4j, a natureza da vulnerabilidade CVE-2021-44228 e os riscos associados.
+* Superfícies de Ataque e Softwares Relacionados: Listas de serviços, componentes e fabricantes afetados, incluindo empresas como Apple, Tencent, Twitter, Cloudflare, Amazon, Tesla, entre outras.
+* Métodos de Verificação de Vulnerabilidade: Orientações sobre como verificar se seu servidor está vulnerável, incluindo links para ferramentas e scripts que auxiliam na detecção da vulnerabilidade.
+Para detalhes completos e recursos adicionais, consulte o repositório no GitHub.
+
+
+
+
+O repositório Log4j-check oferece um plugin para o Burp Suite destinado a identificar a vulnerabilidade CVE-2021-44228, conhecida como Log4Shell, em aplicações web.
+Objetivo:
+Facilitar a detecção da vulnerabilidade Log4Shell em aplicações web durante testes de segurança, integrando-se ao Burp Suite.
+Características:
+* Suporte a RC1 Bypass: Capacidade de contornar mecanismos de defesa RC1.
+* Compatibilidade com JSON: Suporte à análise de respostas em formato JSON.
+* Opções de DNS: Integração com serviços como dnclog.cn e DNS interno do Burp Suite para monitoramento de requisições DNS.
+* Integração com JNDIExploit: Possibilidade de gerar payloads utilizando o JNDIExploit.
+Requisitos:
+* Burp Suite instalado.
+* Plugin JNDIExploit para geração de payloads.
+Uso:
+1. Baixe o plugin a partir da seção de releases do repositório.
+2. Importe o plugin para o Burp Suite.
+3. Configure as opções de DNS conforme necessário.
+4. Utilize o plugin durante o processo de varredura para identificar possíveis vulnerabilidades.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório checkmk-log4j-scanner oferece uma extensão para o Checkmk, projetada para identificar versões vulneráveis do Log4j2 afetadas pela CVE-2021-44228.
+Objetivo:
+Integrar a detecção de vulnerabilidades do Log4j2 diretamente no sistema de monitoramento Checkmk, facilitando a gestão e mitigação de riscos.
+Funcionamento:
+O plugin realiza os seguintes passos:
+1. Localização de Arquivos JAR: Pesquisa recursivamente por arquivos .jar, .war, .ear e .aar.
+2. Identificação de Dependências: Dentro de cada arquivo JAR, localiza a entrada META-INF/maven/org.apache.logging.log4j/log4j-core/pom.properties.
+3. Extração de Metadados: Lê os campos groupId, artifactId e version.
+4. Comparação de Versões: Compara a versão do Log4j2 encontrada com as versões vulneráveis e reporta as versões afetadas.
+Licença:
+GPL-2.0
+Para mais informações e instruções detalhadas, consulte o repositório no GitHub.
+
+
+O repositório log4j_checker disponibiliza um script em Python3 projetado para identificar servidores vulneráveis à CVE-2021-44228, conhecida como Log4Shell, uma falha crítica na biblioteca de logging Log4j2.
+Objetivo:
+Facilitar a detecção de servidores vulneráveis à CVE-2021-44228, permitindo que administradores de sistemas e profissionais de segurança priorizem ações corretivas.
+Funcionamento:
+* Escuta de Conexões: Ao ser iniciado, o script cria uma thread que escuta em todas as interfaces na porta 55555 (configurável via arquivo .env ou variáveis de ambiente) para conexões de retorno de máquinas vulneráveis.
+* Envio de Payloads: O script envia payloads JNDI para URLs fornecidas, incluindo parâmetros de formulários encontrados nas URLs.
+* Detecção de Vulnerabilidades: Se uma máquina vulnerável processar o payload, ela tentará se conectar de volta ao script, indicando a presença da vulnerabilidade.
+Requisitos:
+* Python 3.x
+* Bibliotecas requests e python-dotenv
+
+
+O repositório log4j_checker_beta disponibiliza um script em Bash para sistemas Linux e macOS, destinado a verificar rapidamente se um servidor pode estar vulnerável à CVE-2021-44228, conhecida como Log4Shell.
+Objetivo:
+Fornecer uma ferramenta que auxilie na identificação de possíveis vulnerabilidades relacionadas ao Log4j2, permitindo que administradores de sistemas e profissionais de segurança priorizem ações corretivas.
+Funcionamento:
+O script realiza as seguintes verificações:
+1. Localização de Arquivos: Pesquisa por arquivos que possam conter o Log4j, utilizando o comando locate.
+2. Verificação de Pacotes: Identifica pacotes instalados que possam incluir o Log4j, como Solr e Elasticsearch.
+3. Presença do Java: Verifica se o Java está instalado no sistema, já que muitas aplicações Java podem incluir o Log4j em seus pacotes.
+Requisitos:
+* Sistema operacional Linux ou macOS.
+* Comando locate instalado e atualizado.
+
+
+O repositório log4v-vuln-check disponibiliza um script em Bash projetado para realizar uma verificação rápida e identificar se um servidor está possivelmente afetado pela vulnerabilidade CVE-2021-44228, conhecida como Log4Shell.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de possíveis vulnerabilidades relacionadas ao Log4j2, permitindo a priorização de ações corretivas.
+Funcionalidades:
+* Atualização de Repositórios: Possibilidade de atualizar repositórios APT (comentado por padrão).
+* Instalação de Dependências: Instalação de ferramentas como lsof, unzip, locate e mlocate (comentado por padrão).
+* Atualização do Banco de Dados locate: Atualiza o banco de dados local de arquivos.
+* Busca por Arquivos Relacionados ao Log4j: Utiliza find e locate para localizar arquivos Java, Elasticsearch e Solr.
+* Listagem de Portas em Escuta: Utiliza lsof para listar portas em estado de escuta.
+* Análise de Arquivos JAR/WAR/EAR: Inspeciona arquivos JAR, WAR e EAR em busca de ocorrências do Log4j.
+* Verificação de Hashes de Arquivos .class: Opção para verificar hashes de arquivos .class dentro de arquivos compactados.
+* Sem Alterações no Sistema: O script não realiza alterações permanentes no sistema, exceto a criação de um diretório temporário que é removido após a execução.
+Requisitos:
+* Sistema operacional Linux ou macOS.
+* Ferramentas lsof, unzip, locate e mlocate instaladas (instalação comentada no script).
+
+
+O repositório log4j2-issue-check oferece um projeto de demonstração para avaliar a vulnerabilidade Log4Shell (CVE-2021-44228) no Log4j2.
+Objetivo:
+Fornecer uma ferramenta para testar e compreender a vulnerabilidade Log4Shell, permitindo que desenvolvedores e profissionais de segurança avaliem a exposição de suas aplicações.
+Funcionamento:
+O repositório contém um código que, ao receber uma solicitação GET com o parâmetro de consulta ${jndi:ldap://127.0.0.1:3089/}, tenta estabelecer uma conexão com o servidor LDAP especificado. Se a aplicação processar essa solicitação, indicará a presença da vulnerabilidade.
+Como Testar:
+1. Envie uma solicitação GET para o endpoint /test com o parâmetro userParam configurado como ${jndi:ldap://127.0.0.1:3089/}.
+2. Se a aplicação tentar se conectar ao servidor LDAP na URL fornecida, um erro será registrado, indicando que a vulnerabilidade está presente.
+Mitigação:
+* Solução Temporária: Para versões do log4j-core >=2.10, adicione o parâmetro JVM -Dlog4j2.formatMsgNoLookups=true para desabilitar a pesquisa JNDI.
+* Solução Permanente: Atualize o Log4j para a versão 2.15.0 ou superior, onde a vulnerabilidade foi corrigida.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório log4j-vuln-coverage-check oferece uma ferramenta simples para verificar a cobertura de sistemas em relação à vulnerabilidade CVE-2021-44228, conhecida como Log4Shell, que afeta o Log4j2.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na avaliação da exposição de suas aplicações à vulnerabilidade Log4Shell, permitindo a priorização de ações corretivas.
+Funcionamento:
+O repositório contém um arquivo de texto chamado trigger.txt. Ao ser processado por uma aplicação vulnerável, o conteúdo desse arquivo pode acionar a exploração da vulnerabilidade. A presença de falhas de segurança relacionadas ao Log4j2 pode ser identificada ao monitorar o processamento desse arquivo.
+Mitigação:
+Para mitigar a vulnerabilidade CVE-2021-44228, é recomendável atualizar o Log4j2 para a versão 2.15.0 ou superior, onde a falha foi corrigida.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório log4jcheck oferece um script em Python projetado para identificar sistemas vulneráveis à CVE-2021-44228, conhecida como Log4Shell, que afeta o Log4j2.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de vulnerabilidades relacionadas ao Log4j2, permitindo a priorização de ações corretivas.
+Funcionamento:
+O script realiza as seguintes verificações:
+1. Injeção de Payload em Cabeçalhos HTTP Comuns: O script injeta um payload específico em diversos cabeçalhos HTTP para identificar respostas que indiquem vulnerabilidade. Os cabeçalhos analisados incluem:
+   * X-Api-Version
+   * User-Agent
+   * Referer
+   * X-Druid-Comment
+   * Origin
+   * Location
+   * X-Forwarded-For
+   * Cookie
+   * X-Requested-With
+   * X-Forwarded-Host
+   * Accept
+2. Injeção de Payload em Solicitações GET: O script também injeta o payload em parâmetros de solicitações GET para verificar a vulnerabilidade.
+3. Monitoramento de Solicitações DNS: Para detectar sistemas vulneráveis, o script monitora solicitações DNS que contenham um UUID específico criado para o alvo. Isso é feito para aumentar a probabilidade de detecção em sistemas com filtragem de tráfego de saída, já que o tráfego DNS de saída é frequentemente permitido.
+Mitigação:
+Para mitigar a vulnerabilidade CVE-2021-44228, é recomendável atualizar o Log4j2 para a versão 2.15.0 ou superior, onde a falha foi corrigida.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório log4j-checker oferece scripts em Bash e PowerShell para identificar arquivos .jar no sistema que possam ser vulneráveis à CVE-2021-44228, conhecida como Log4Shell.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de arquivos .jar que podem conter versões vulneráveis do Log4j2, permitindo a priorização de ações corretivas.
+Funcionalidades:
+* Verificação de Hashes: Os scripts calculam o hash SHA-256 de cada arquivo .jar encontrado e o comparam com uma lista de hashes conhecidos de versões vulneráveis do Log4j2.
+Requisitos:
+* Sistema operacional Linux ou macOS para o script Bash.
+* Sistema operacional Windows para o script PowerShell.
+
+
+O repositório log4jcheck oferece um script em Python projetado para verificar listas de URLs em busca da vulnerabilidade CVE-2021-44228, conhecida como Log4Shell, que afeta o Log4j2.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de sistemas vulneráveis ao Log4Shell, permitindo a priorização de ações corretivas.
+Funcionalidades:
+* Verificação Multithreaded: O script realiza verificações simultâneas em múltiplas URLs, acelerando o processo de detecção.
+* Suporte a Métodos HTTP: Suporta solicitações POST e GET, incluindo parâmetros, para testar diferentes pontos de entrada.
+
+
+O repositório CVE-2021-44228-Apache-Log4j-Rce-main contém um código de demonstração para explorar a vulnerabilidade CVE-2021-44228, conhecida como Log4Shell, que afeta o Log4j2.
+Objetivo:
+Demonstrar a exploração da vulnerabilidade Log4Shell, permitindo que profissionais de segurança compreendam o mecanismo de ataque e implementem medidas corretivas adequadas.
+Funcionamento:
+O repositório inclui um arquivo Java (Exploit.java) que, quando compilado e executado, tenta explorar a vulnerabilidade em um alvo específico. Para que a exploração seja bem-sucedida, é necessário que o servidor de destino esteja executando uma versão vulnerável do Log4j2 e que o código de exploração seja carregado corretamente.
+
+
+O repositório CVE-2022-0492-Checker disponibiliza um script destinado a verificar se um ambiente de contêiner está vulnerável à CVE-2022-0492, uma falha de escalonamento de privilégios no kernel do Linux.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de ambientes de contêiner suscetíveis à CVE-2022-0492, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+Em 4 de fevereiro, o Linux anunciou a CVE-2022-0492, uma nova vulnerabilidade de escalonamento de privilégios no kernel. A CVE-2022-0492 marca um erro lógico nos grupos de controle (cgroups), uma funcionalidade do Linux que é um componente fundamental dos contêineres. O problema destaca-se como um dos escalonamentos de privilégios mais simples do Linux descobertos recentemente: o kernel do Linux expôs erroneamente uma operação privilegiada a usuários sem privilégios.
+Felizmente, as configurações de segurança padrão na maioria dos ambientes de contêiner são suficientes para prevenir a fuga de contêineres. Contêineres executando com AppArmor ou SELinux estão protegidos. No entanto, se você executar contêineres sem as configurações de segurança recomendadas ou com privilégios adicionais, pode estar em risco.
+O repositório CVE-2022-0492-Docker-Breakout-Checker-and-PoC disponibiliza um script em Bash projetado para verificar se um contêiner Docker está vulnerável à CVE-2022-0492, uma falha de escalonamento de privilégios no kernel do Linux que pode permitir a fuga do contêiner e o comprometimento do sistema host.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de contêineres Docker suscetíveis à CVE-2022-0492, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-0492 é uma falha no kernel do Linux que afeta os grupos de controle (cgroups). Especificamente, o problema reside na função cgroup_release_agent_write em kernel/cgroup/cgroup-v1.c. Essa falha permite que um processo dentro de um contêiner modifique o arquivo release_agent de um cgroup, potencialmente executando código com privilégios elevados e comprometendo o sistema host.
+
+
+O repositório CVE-2022-0847-dirty-pipe-kernel-checker disponibiliza um script em Python projetado para verificar se o kernel do seu sistema está vulnerável à CVE-2022-0847, conhecida como "Dirty Pipe".
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas suscetíveis à vulnerabilidade "Dirty Pipe", permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-0847, apelidada de "Dirty Pipe", é uma falha de escalonamento de privilégios no kernel do Linux que permite a processos não privilegiados sobrescreverem arquivos somente leitura, como /etc/passwd, levando a possíveis escalonamentos de privilégios.
+
+
+O repositório CVE-2022-1388-RCE-checker-and-POC-Exploit disponibiliza um script em Bash para verificar a vulnerabilidade CVE-2022-1388, conhecida como "F5 BIG-IP iControl REST RCE".
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas F5 BIG-IP vulneráveis à CVE-2022-1388, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-1388 é uma falha de execução remota de código (RCE) que afeta o F5 BIG-IP, permitindo que um atacante não autenticado execute comandos arbitrários no sistema alvo.
+
+
+O repositório CVE-2022-1388-checker disponibiliza um script em Bash projetado para verificar múltiplos hosts em busca da vulnerabilidade CVE-2022-1388, conhecida como "F5 BIG-IP iControl REST RCE".
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas F5 BIG-IP suscetíveis à CVE-2022-1388, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-1388 é uma falha de execução remota de código (RCE) que afeta o F5 BIG-IP, permitindo que um atacante não autenticado execute comandos arbitrários no sistema alvo.
+
+
+
+
+O repositório SignChecker disponibiliza uma ferramenta de teste em Java projetada para demonstrar a vulnerabilidade CVE-2022-21449.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas vulneráveis à CVE-2022-21449, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-21449 é uma falha de segurança que afeta o Java, permitindo que um atacante não autenticado execute código arbitrário no sistema alvo.
+
+
+O repositório Invoke-CVE-2022-22965-SafeCheck disponibiliza um script em PowerShell projetado para verificar se um sistema está vulnerável à CVE-2022-22965, conhecida como "Spring4Shell".
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas afetados pela vulnerabilidade "Spring4Shell", permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-22965, apelidada de "Spring4Shell", é uma falha de execução remota de código (RCE) que afeta o Spring Framework, permitindo que um atacante não autenticado execute comandos arbitrários no sistema alvo.
+
+
+O repositório CVE-2022-26134_check disponibiliza um script em Python projetado para verificar se um servidor Confluence está vulnerável à CVE-2022-26134, uma falha de execução remota de código (RCE) que afeta versões específicas do Atlassian Confluence Server e Data Center.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de servidores Confluence suscetíveis à CVE-2022-26134, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-26134 é uma falha de execução remota de código (RCE) que afeta o Atlassian Confluence Server e Data Center, permitindo que um atacante não autenticado execute comandos arbitrários no sistema alvo.
+
+
+O repositório CVE-2022-27255-checker disponibiliza um script em Python projetado para verificar se um dispositivo está vulnerável à CVE-2022-27255, uma falha de segurança que afeta o Realtek eCos SDK, permitindo a execução remota de código (RCE) através de um estouro de buffer no SIP ALG.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de dispositivos suscetíveis à CVE-2022-27255, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-27255 é uma falha de segurança que afeta o Realtek eCos SDK, permitindo que um atacante remoto execute código arbitrário sem autenticação, explorando um estouro de buffer no SIP ALG.
+
+
+O repositório CVE-2022-30525_check disponibiliza um script em Python projetado para verificar se dispositivos Zyxel USG FLEX estão vulneráveis à CVE-2022-30525, uma falha de injeção de comando do sistema operacional que permite a execução remota de comandos arbitrários.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de dispositivos Zyxel USG FLEX suscetíveis à CVE-2022-30525, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-30525 é uma falha de injeção de comando do sistema operacional que afeta dispositivos Zyxel USG FLEX, permitindo que um atacante remoto e não autenticado execute comandos arbitrários no dispositivo vulnerável.
+
+
+O repositório CVE-2022-30780_Checker disponibiliza um script em Python projetado para verificar se um servidor web está vulnerável à CVE-2022-30780, uma falha de negação de serviço (DoS) que afeta versões específicas do servidor web lighttpd.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de servidores web suscetíveis à CVE-2022-30780, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-30780 é uma falha de negação de serviço (DoS) que afeta o servidor web lighttpd, permitindo que um atacante remoto cause consumo excessivo de CPU devido a conexões bloqueadas.
+
+
+O repositório Minio-Security-Vulnerability-Checker disponibiliza uma ferramenta em Python projetada para verificar se um sistema Minio está vulnerável à CVE-2022-35919, uma falha de segurança que permite a execução remota de código (RCE) devido a uma falha de injeção de comando no endpoint /minio/admin/v3/remove.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas Minio suscetíveis à CVE-2022-35919, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-35919 é uma falha de segurança que afeta o Minio, permitindo que um atacante remoto e não autenticado execute comandos arbitrários no sistema alvo.
+
+
+O repositório proxynotshell-IOC-Checker disponibiliza um script em PowerShell projetado para verificar indicadores de comprometimento (IOCs) associados às vulnerabilidades ProxyNotShell (CVE-2022-41040 e CVE-2022-41082) em servidores Microsoft Exchange.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sinais de exploração das vulnerabilidades ProxyNotShell em servidores Microsoft Exchange, permitindo a implementação de medidas corretivas adequadas.
+Sobre as Vulnerabilidades:
+As vulnerabilidades ProxyNotShell (CVE-2022-41040 e CVE-2022-41082) afetam o Microsoft Exchange Server, permitindo que um atacante remoto e não autenticado execute comandos arbitrários no servidor alvo.
+
+
+O repositório cve-2022-42889-check disponibiliza uma ferramenta em Java projetada para verificar se um sistema está vulnerável à CVE-2022-42889, também conhecida como "Text4Shell".
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas suscetíveis à CVE-2022-42889, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-42889, apelidada de "Text4Shell", é uma falha crítica que afeta o Apache Commons Text, permitindo a execução remota de código (RCE) através da interpolação de strings.
+
+
+O repositório CVE-2022-43271 disponibiliza informações sobre uma vulnerabilidade de Cross-Site Scripting (XSS) armazenada no software Move CRM, versão 4, build 260.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação e mitigação da vulnerabilidade CVE-2022-43271, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-43271 é uma falha de XSS armazenada no Move CRM, especificamente na seção de configurações de funcionários, no campo de texto "Profile". Ao salvar as alterações e interceptar a requisição POST, o parâmetro 'lProfileCopy' pode ser modificado para incluir um payload XSS, contornando a filtragem do front-end. Essa vulnerabilidade foi descoberta em 2 de agosto de 2022 e corrigida em 4 de agosto de 2022.
+GitHub
+Mitigação:
+Para proteger sistemas contra a CVE-2022-43271, é recomendável atualizar o Move CRM para a versão 4, build 261 ou posterior, que contém a correção para essa vulnerabilidade.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório CVE-2022-47966_checker disponibiliza um script em PowerShell projetado para identificar indicadores de comprometimento (IOCs) relacionados à vulnerabilidade CVE-2022-47966 em servidores ManageEngine.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de sinais de exploração da CVE-2022-47966 em servidores ManageEngine, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2022-47966 é uma falha crítica de execução remota de código (RCE) que afeta diversos produtos ManageEngine, permitindo que um atacante remoto e não autenticado execute comandos arbitrários no servidor alvo.
+
+
+O repositório CVE-2023-20198-Checker disponibiliza uma ferramenta em Python projetada para verificar se dispositivos Cisco IOS XE estão vulneráveis à CVE-2023-20198, uma falha crítica de escalonamento de privilégios.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de dispositivos Cisco IOS XE suscetíveis à CVE-2023-20198, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-20198 é uma falha de escalonamento de privilégios que afeta o Cisco IOS XE, permitindo que um atacante remoto e não autenticado obtenha privilégios elevados no dispositivo alvo.
+
+
+O repositório CVE-2023-20198-checker disponibiliza um script em Python projetado para verificar se dispositivos Cisco IOS XE estão vulneráveis à CVE-2023-20198, uma falha crítica de escalonamento de privilégios.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de dispositivos Cisco IOS XE suscetíveis à CVE-2023-20198, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-20198 é uma falha de escalonamento de privilégios que afeta o Cisco IOS XE, permitindo que um atacante remoto e não autenticado obtenha privilégios elevados no dispositivo alvo.
+        
+O repositório CVE-2023-22515-check disponibiliza um script em Python projetado para verificar se uma instância do Confluence está vulnerável à CVE-2023-22515, uma falha crítica de controle de acesso quebrado que afeta as versões 8.0.0 e superiores do Atlassian Confluence Data Center e Server.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do Confluence suscetíveis à CVE-2023-22515, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-22515 é uma falha de controle de acesso quebrado que permite a criação não autorizada de contas de administrador no Confluence, comprometendo a segurança da aplicação.
+
+
+O repositório cve-2023-22527 disponibiliza três exploits em Go projetados para explorar a vulnerabilidade CVE-2023-22527 no Atlassian Confluence, permitindo a execução remota de código (RCE) sem a necessidade de gravar arquivos no disco.
+Objetivo:
+Demonstrar técnicas avançadas de exploração da CVE-2023-22527, permitindo a execução de código arbitrário na memória do servidor afetado.
+Sobre a Vulnerabilidade:
+A CVE-2023-22527 é uma falha crítica de execução remota de código (RCE) que afeta o Atlassian Confluence, permitindo que um atacante remoto e não autenticado execute comandos arbitrários no servidor alvo.
+Exploit Disponíveis:
+1. Webshell: Carrega um webshell na memória do servidor.
+2. Reverse Shell: Carrega um reverse shell na memória do servidor.
+3. Nashorn: Carrega um reverse shell em JavaScript (Nashorn) na memória do servidor.
+Compilação:
+Para compilar os exploits, utilize o Docker conforme as instruções fornecidas no repositório.
+Observações:
+* Responsabilidade Legal: A execução de exploits deve ser realizada apenas em sistemas para os quais você tem autorização explícita.
+* Mitigação: Para proteger servidores contra a CVE-2023-22527, é recomendável aplicar as atualizações de segurança fornecidas pela Atlassian.
+Para detalhes adicionais e instruções completas, consulte o repositório no GitHub.
+
+
+O repositório CVE-2023-25157-checker disponibiliza um script em Go projetado para verificar se uma instância do GeoServer está vulnerável à CVE-2023-25157, uma falha crítica de injeção de SQL.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do GeoServer suscetíveis à CVE-2023-25157, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-25157 é uma falha de injeção de SQL que afeta o GeoServer, permitindo que um atacante remoto e não autenticado execute comandos SQL arbitrários no banco de dados do servidor alvo.
+
+
+O repositório cve-2023-25194 disponibiliza um exploit em Go projetado para explorar a vulnerabilidade CVE-2023-25194, uma falha de desserialização que afeta o Apache Kafka. Este exploit demonstra a exploração da vulnerabilidade especificamente contra o Apache Druid, utilizando o Kafka.
+GitHub
+Objetivo:
+Auxiliar profissionais de segurança na demonstração e compreensão da exploração da CVE-2023-25194, permitindo a avaliação da segurança de sistemas que utilizam o Apache Druid e o Apache Kafka.
+Sobre a Vulnerabilidade:
+A CVE-2023-25194 é uma falha de desserialização que afeta o Apache Kafka, permitindo que um atacante remoto e não autenticado execute código arbitrário no sistema alvo. Essa vulnerabilidade pode ser explorada através de uma infraestrutura LDAP JNDI maliciosa, facilitando a execução de código remoto.
+
+
+O repositório Superset_auth_bypass_check disponibiliza uma ferramenta em Python para verificar se uma instância do Apache Superset está vulnerável à CVE-2023-27524, uma falha de bypass de autenticação.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do Apache Superset suscetíveis à CVE-2023-27524, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-27524 é uma falha de bypass de autenticação que afeta o Apache Superset, permitindo que um atacante remoto e não autenticado acesse áreas restritas da aplicação, incluindo o painel administrativo.
+
+
+O repositório CVE-2023-27997-Check disponibiliza uma ferramenta em Python para verificar se uma instância do FortiGate SSL VPN está vulnerável à CVE-2023-27997, uma falha de buffer overflow baseada em heap que pode ser explorada para execução remota de código (RCE) pré-autenticação.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do FortiGate SSL VPN suscetíveis à CVE-2023-27997, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-27997 é uma falha de buffer overflow baseada em heap no componente SSL VPN do FortiGate, que pode ser explorada para execução remota de código (RCE) pré-autenticação.
+O repositório CVE-2023-27997-check disponibiliza uma ferramenta em Python para verificar se uma instância do FortiGate SSL VPN está vulnerável à CVE-2023-27997, uma falha de buffer overflow baseada em heap que pode ser explorada para execução remota de código (RCE) pré-autenticação.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do FortiGate SSL VPN suscetíveis à CVE-2023-27997, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-27997 é uma falha de buffer overflow baseada em heap no componente SSL VPN do FortiGate, que pode ser explorada para execução remota de código (RCE) pré-autenticação. Esta ferramenta permite detectar versões vulneráveis sem interromper o processo sslvpnd ou desconectar usuários ativos.
+
+
+O repositório minio_unauth_check foi desenvolvido para detectar a vulnerabilidade CVE-2023-28432 no MinIO, que pode permitir o acesso não autorizado a variáveis de ambiente sensíveis.
+Sobre a vulnerabilidade CVE-2023-28432:
+O MinIO é um sistema de armazenamento de objetos. A vulnerabilidade foi descoberta em versões do MinIO até 2019-12-17T23-16-33Z e afeta implantações em cluster, onde o MinIO pode retornar variáveis de ambiente, como MINIO_SECRET_KEY e MINIO_ROOT_PASSWORD, sem autenticação, permitindo o vazamento de informações sensíveis.
+
+
+O repositório CVE-2023-29357-Check disponibiliza um script em Python para verificar se uma instância do Microsoft SharePoint Server está vulnerável à CVE-2023-29357, uma falha de elevação de privilégio que permite a atacantes remotos obter privilégios elevados em instalações afetadas do SharePoint Server.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do SharePoint Server suscetíveis à CVE-2023-29357, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade:
+A CVE-2023-29357 é uma falha de elevação de privilégio no Microsoft SharePoint Server que pode ser explorada por atacantes remotos para obter privilégios elevados em instalações afetadas. Embora este script se concentre na elevação de privilégio, atacantes com intenções maliciosas podem combinar essa vulnerabilidade com uma falha de Execução Remota de Código (RCE) para comprometer a integridade, disponibilidade e confidencialidade do sistema alvo. 
+
+
+O repositório Check-for-CVE-2023-32629-GameOver-lay disponibiliza um script em Python projetado para verificar se um sistema Ubuntu está vulnerável às falhas conhecidas como "GameOver(lay)", especificamente as vulnerabilidades CVE-2023-2640 e CVE-2023-32629.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas Ubuntu suscetíveis às vulnerabilidades mencionadas, permitindo a implementação de medidas corretivas adequadas.
+Sobre as Vulnerabilidades:
+As vulnerabilidades CVE-2023-2640 e CVE-2023-32629 estão relacionadas ao módulo OverlayFS do kernel Linux, presente em versões específicas do Ubuntu. Essas falhas podem permitir a elevação local de privilégios, comprometendo a segurança do sistema. 
+
+
+O repositório fetch-broker-conf disponibiliza uma ferramenta em Go projetada para identificar indicadores de comprometimento relacionados à vulnerabilidade CVE-2023-33246 no RocketMQ.
+Objetivo:
+Auxiliar na detecção de possíveis compromissos em configurações do RocketMQ, especificamente na variável rocketmqHome, que pode ser explorada por atacantes para executar código malicioso.
+Sobre a Vulnerabilidade CVE-2023-33246:
+A CVE-2023-33246 é uma falha de segurança no RocketMQ que permite a execução remota de código através da manipulação da variável rocketmqHome. Atacantes podem explorar essa vulnerabilidade para comprometer sistemas afetados.
+
+
+O repositório CVE-2023-3519-BackdoorCheck disponibiliza um script em Python projetado para verificar se instâncias do Citrix Gateway ou Citrix ADC estão vulneráveis à falha de segurança CVE-2023-3519.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas Citrix suscetíveis à CVE-2023-3519, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-3519:
+A CVE-2023-3519 é uma falha de segurança no Citrix Gateway e Citrix ADC que pode permitir a execução remota de código, comprometendo a segurança do sistema afetado.
+
+
+O repositório cve-2023-36845-scanner disponibiliza uma ferramenta em Go projetada para verificar se firewalls Juniper estão vulneráveis à falha de segurança CVE-2023-36845.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de sistemas Juniper suscetíveis à CVE-2023-36845, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-36845:
+A CVE-2023-36845 é uma falha de segurança no J-Web do Junos OS da Juniper Networks, presente em dispositivos das séries EX e SRX. Essa vulnerabilidade permite que um atacante remoto e não autenticado execute código arbitrário no sistema afetado.
+
+
+O repositório CVE-2023-36884-Checker disponibiliza um script em PowerShell projetado para verificar se as recomendações de segurança da Microsoft para a vulnerabilidade CVE-2023-36884 foram corretamente aplicadas.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na confirmação de que as medidas de mitigação para a CVE-2023-36884 estão implementadas corretamente, conforme as orientações da Microsoft.
+Sobre a Vulnerabilidade CVE-2023-36884:
+A CVE-2023-36884 é uma falha de segurança no Microsoft Office que permite a execução remota de código através de documentos maliciosos. A Microsoft recomenda a criação de entradas específicas no registro para bloquear a navegação de arquivos entre protocolos, mitigando assim a exploração dessa vulnerabilidade.
+
+
+O repositório ShellTorchChecker disponibiliza uma ferramenta em Shell Script projetada para verificar se uma instância do TorchServe está vulnerável à falha de segurança CVE-2023-43654.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instâncias do TorchServe suscetíveis à CVE-2023-43654, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-43654:
+A CVE-2023-43654 é uma falha de segurança no TorchServe que pode permitir a execução remota de código através de solicitações maliciosas, comprometendo a segurança do sistema afetado.
+
+
+O repositório CVE-2023-4596-OpenSSH-Multi-Checker disponibiliza um script em Shell projetado para verificar múltiplos alvos (endereços IP ou nomes de host) quanto à vulnerabilidade CVE-2023-4596 no OpenSSH.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de servidores OpenSSH suscetíveis à CVE-2023-4596, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-4596:
+A CVE-2023-4596 é uma falha de segurança no OpenSSH que pode permitir a execução remota de código, comprometendo a segurança do sistema afetado.
+
+
+O repositório CVE-2023-4596 Vulnerable Exploit and Checker Version disponibiliza uma ferramenta em Python projetada para verificar e explorar a vulnerabilidade CVE-2023-4596.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação e exploração da CVE-2023-4596, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-4596:
+A CVE-2023-4596 é uma falha de segurança que pode permitir a execução remota de comandos através do upload de arquivos arbitrários, comprometendo a segurança do sistema afetado.
+O repositório cve-2023-46604 disponibiliza uma ferramenta em Go projetada para explorar a vulnerabilidade CVE-2023-46604 no Apache ActiveMQ.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação e exploração da CVE-2023-46604, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-46604:
+A CVE-2023-46604 é uma falha de segurança no Apache ActiveMQ que pode permitir a execução remota de código devido a práticas inseguras de desserialização dentro do protocolo OpenWire.
+
+
+O repositório libwebp-checker disponibiliza uma ferramenta em Shell Script projetada para verificar se aplicações ou processos em servidores estão utilizando versões vulneráveis da biblioteca libwebp, especificamente versões entre 0.5.0 e 1.3.1, afetadas pela falha de segurança CVE-2023-4863.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de aplicações que utilizam versões vulneráveis da libwebp, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-4863:
+A CVE-2023-4863 é uma falha de segurança na libwebp que pode permitir a execução remota de código devido a um estouro de buffer na memória heap, comprometendo a segurança do sistema afetado.
+GitHub
+Funcionamento da Ferramenta:
+1. Análise de Processos: A ferramenta examina os arquivos abertos pelos processos em execução no servidor.
+2. Identificação de Versões Vulneráveis: Verifica se os processos estão utilizando versões da libwebp entre 0.5.0 e 1.3.1, que são afetadas pela CVE-2023-4863.
+3. Detecção de Funções Específicas: A partir da versão 0.5.0, a libwebp introduziu novas funções exportadas, como WebPCopyPlane e WebPCopyPixels. A presença da função vulnerável VP8LBuildHuffmanTable indica uma versão afetada.
+
+
+
+
+O repositório citrix-logchecker disponibiliza um script em Perl projetado para analisar arquivos de log do Citrix NetScaler (agora conhecido como Citrix ADC) e identificar sinais de exploração da vulnerabilidade CVE-2023-4966.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de tentativas de exploração da CVE-2023-4966, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-4966:
+A CVE-2023-4966 é uma falha de segurança no Citrix NetScaler que pode permitir a execução remota de código, comprometendo a segurança do sistema afetado.
+Funcionamento da Ferramenta:
+O script citrix-anomaly.pl realiza as seguintes operações:
+1. Análise de Logs: Examina arquivos de log do Citrix NetScaler em busca de reconexões de sessões que possam indicar tentativas de exploração da vulnerabilidade.
+2. Parâmetros de Execução:
+   * -d: Ativa o modo de depuração.
+   * -v: Ativa o modo verboso.
+   * -h: Exibe a ajuda.
+   * -a X: Define o tipo de agregação. Os valores possíveis são:
+      * b: Agregação simples por /24 (padrão).
+      * a: Agregação por ASN.
+      * p: Agregação por prefixo de tabela de roteamento.
+   * -p <caminho>: Caminho para um arquivo de tabela de roteamento, no formato "prefixo ASN" por linha.
+
+
+O repositório cve-2023-51467 disponibiliza uma ferramenta em Go projetada para explorar a vulnerabilidade CVE-2023-51467 no Apache OFBiz.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação e exploração da CVE-2023-51467, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2023-51467:
+A CVE-2023-51467 é uma falha de segurança no Apache OFBiz que pode permitir a execução remota de código devido a práticas inseguras de desserialização dentro do protocolo OpenWire.
+Funcionamento da Ferramenta:
+A ferramenta oferece as seguintes funcionalidades:
+1. Verificação de Alvo: Confirma se o alvo está vulnerável à CVE-2023-51467.
+2. Scanner de Versão: Identifica a versão do Apache OFBiz em execução no alvo.
+3. Shell Reverso em Memória: Utiliza o Nashorn para executar um shell reverso em memória, sem a necessidade de arquivos temporários.
+
+
+O repositório CVE-2024-1086-checker disponibiliza um script em Python projetado para verificar se a configuração do kernel Linux está vulnerável à falha de segurança CVE-2024-1086.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de configurações de kernel suscetíveis à CVE-2024-1086, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-1086:
+A CVE-2024-1086 é uma falha de segurança no kernel Linux que pode permitir a escalada de privilégios locais, comprometendo a segurança do sistema afetado.
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Verificação de Configuração do Kernel: Analisa a configuração do kernel para identificar se está vulnerável à CVE-2024-1086.
+2. Interpretação dos Resultados:
+   * "kernel config not vulnerable": Indica que a configuração do kernel não é vulnerável à CVE-2024-1086 com os métodos de exploração atualmente conhecidos.
+   * "kernel config vulnerable": Indica que a configuração do kernel é vulnerável à CVE-2024-1086.
+
+
+O repositório CVE-2024-21762-Checker disponibiliza um script em Python projetado para verificar se um servidor está vulnerável à falha de segurança CVE-2024-21762 no Fortinet SSL VPN.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de servidores suscetíveis à CVE-2024-21762, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-21762:
+A CVE-2024-21762 é uma falha de execução remota de código no Fortinet SSL VPN, afetando versões do FortiOS de 6.0 a 7.4.2.
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Envio de Solicitações Específicas: Envia requisições HTTP específicas para o servidor alvo.
+2. Análise de Respostas: Avalia as respostas recebidas para determinar a vulnerabilidade.
+3. Exibição de Resultados: Informa se o servidor está vulnerável ou não à CVE-2024-21762.
+Requisitos:
+* Python 3: Certifique-se de que o Python 3 esteja instalado no sistema.
+
+
+O repositório CVE-2024-21762-Exploit-PoC-Fortinet-SSL-VPN-Check disponibiliza um script em Python projetado para verificar se um firewall Fortinet SSL VPN está vulnerável à falha de segurança CVE-2024-21762.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de firewalls Fortinet SSL VPN suscetíveis à CVE-2024-21762, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-21762:
+A CVE-2024-21762 é uma falha de execução remota de código (RCE) sem autenticação no Fortinet SSL VPN, afetando versões específicas do FortiOS.
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Envio de Solicitações Específicas: Envia requisições HTTP específicas para o servidor alvo.
+2. Análise de Respostas: Avalia as respostas recebidas para determinar a vulnerabilidade.
+3. Exibição de Resultados: Informa se o servidor está vulnerável ou não à CVE-2024-21762.
+Requisitos:
+* Python 3: Certifique-se de que o Python 3 esteja instalado no sistema.
+O repositório cve-2024-21762-checker disponibiliza um script em Python projetado para identificar dispositivos FortiGate SSL VPN vulneráveis à falha de segurança CVE-2024-21762.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de dispositivos FortiGate SSL VPN suscetíveis à CVE-2024-21762, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-21762:
+A CVE-2024-21762 é uma falha de execução remota de código (RCE) sem autenticação no FortiGate SSL VPN, afetando versões específicas do FortiOS.
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Utilização da API do Shodan: Emprega a API do Shodan para localizar dispositivos FortiGate que executam SSL VPN na porta 10443.
+2. Verificação de Vulnerabilidade: Avalia o status de vulnerabilidade dos dispositivos identificados.
+3. Exibição de Resultados: Apresenta informações adicionais, como organização e país, juntamente com o status de vulnerabilidade (Vulnerável ou Corrigido).
+Requisitos:
+* Python 3.x: Certifique-se de que o Python 3 esteja instalado no sistema.
+* Chave de API do Shodan: Necessária para acessar a API do Shodan.
+
+
+O repositório cve-2024-21762-check disponibiliza um script em Python desenvolvido para identificar se uma VPN SSL FortiGate está vulnerável à falha de segurança CVE-2024-21762.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na detecção de dispositivos FortiGate SSL VPN suscetíveis à CVE-2024-21762, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-21762:
+A CVE-2024-21762 é uma falha de execução remota de código (RCE) sem autenticação no FortiGate SSL VPN, afetando versões específicas do FortiOS.
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Envio de Solicitações Específicas: Envia requisições HTTP específicas para o servidor alvo.
+2. Análise de Respostas: Avalia as respostas recebidas para determinar a vulnerabilidade.
+3. Exibição de Resultados: Informa se o servidor está vulnerável ou não à CVE-2024-21762.
+Requisitos:
+* Python 3: Certifique-se de que o Python 3 esteja instalado no sistema.
+
+
+O repositório CVE-2024-22198_Checker disponibiliza uma ferramenta em Python destinada a verificar se uma instalação do Nginx-UI está vulnerável à falha de segurança CVE-2024-22198.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação de instalações do Nginx-UI suscetíveis à CVE-2024-22198, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-22198:
+A CVE-2024-22198 é uma falha de execução remota de código (RCE) autenticada no Nginx-UI, uma interface web para gerenciamento de configurações do Nginx. A vulnerabilidade permite a execução arbitrária de comandos ao manipular configurações específicas, podendo resultar em escalonamento de privilégios e divulgação de informações. A falha foi corrigida na versão 2.0.0-beta.9.
+GitHub
+Funcionamento da Ferramenta:
+O script realiza as seguintes operações:
+1. Envio de Solicitações Específicas: Envia requisições HTTP para o servidor alvo.
+2. Análise de Respostas: Avalia as respostas recebidas para determinar a versão do Nginx-UI e verificar se está vulnerável.
+3. Exibição de Resultados: Informa a versão do Nginx-UI e se o sistema está vulnerável ou não à CVE-2024-22198.
+Requisitos:
+* Python 3: Certifique-se de que o Python 3 esteja instalado no sistema
+
+
+
+
+O repositório CVE-2024-24919-CHECKPOINT disponibiliza scripts em Bash destinados a verificar e explorar a vulnerabilidade CVE-2024-24919 em dispositivos Check Point Security Gateways.
+Objetivo:
+Auxiliar administradores de sistemas e profissionais de segurança na identificação e exploração da CVE-2024-24919, permitindo a implementação de medidas corretivas adequadas.
+Sobre a Vulnerabilidade CVE-2024-24919:
+A CVE-2024-24919 é uma falha de leitura arbitrária de arquivos sem autenticação nos dispositivos Check Point Security Gateways, permitindo que um atacante leia informações sensíveis, como arquivos de senha e logs, sem necessidade de autenticação prévia.
+GitHub
+Funcionamento dos Scripts:
+1. SCAN-CVE-2024-24919.sh:
+   * Destinado a escanear uma lista de alvos para identificar dispositivos vulneráveis.
+   * O arquivo de alvos padrão é "targets".
+   * Os dispositivos vulneráveis são registrados no arquivo "vulnerables.txt".
+2. CVE-2024-24919.sh:
+   * Utilizado para extrair arquivos dos seguintes diretórios do servidor:
+      * /etc/passwd
+      * /etc/shadow
+      * /var/log/auth
+      * /var/log/messages
+   * Os conteúdos de passwd e shadow são exibidos na tela.
+   * Os conteúdos de auth e messages são gravados nos arquivos "auth.checkpoint" e "messages.checkpoint", respectivamente.
+Requisitos:
+* Ferramentas Necessárias:
+   * parallel
+   * curl
+* Permissões:
+   * Certifique-se de que os scripts tenham permissões de execução adequadas.
