@@ -1,4 +1,4 @@
-In this project, we are working on categorizing the Proof of Concepts (PoC) from the NomiSec repository(https://github.com/nomi-sec/PoC-in-GitHub), aiming to streamline and expedite their management. Our goal is to make the repository more attractive for future research endeavors in the field of information security.
+In this project, we are working on categorizing the Proof of Concepts (PoC) from the NomiSec repository( https://github.com/nomi-sec/PoC-in-GitHub ), aiming to streamline and expedite their management. Our goal is to make the repository more attractive for future research endeavors in the field of information security.
 
 By categorizing the PoC items, we are implementing a structured framework that will enhance the accessibility of these resources, making it easier for researchers and security enthusiasts to find specific examples and tools related to their areas of interest. This project is not only about organizing the repository but also about enriching its content with metadata, descriptions, and tags, allowing for more efficient search and exploration.
 
