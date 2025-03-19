@@ -1,4 +1,4 @@
-1- 2023/CVE-2023-37979.json Checker and PoC
+1- 2023/CVE-2023-37979.json PoC
 (https://github.com//d0rb//CVE-2023-37979)
 
 This code does both: it first checks if a WordPress website is vulnerable to a specific security issue in the Ninja Forms plugin, and if it determines that the site is vulnerable, it attempts to exploit the vulnerability by sending a payload.
@@ -9,7 +9,7 @@ The payload sent to the site is not shown in the code but should be customized b
 So, the code combines vulnerability checking with an actual exploitation attempt, making it both a checker and an exploit tool. However, please note that using this code for exploiting websites without proper authorization is illegal and unethical. It should only be used for educational and ethical purposes, such as testing your own websites or systems for vulnerabilities.
 
 
-2-2018/CVE-2018-7600.json Checker and PoC
+2-2018/CVE-2018-7600.json PoC
 (https://github.com//Damian972//drupalgeddon-2) 
  
 This PHP code is an exploit for the vulnerability CVE-2018-7600, also known as Drupalgeddon or SA-CORE-2018-002, which affected Drupal versions 7.x and 8.x. The vulnerability allowed remote execution of unauthenticated code.
@@ -37,7 +37,7 @@ This code is a real exploit that attempts to exploit the Drupalgeddon vulnerabil
 
 
 
-3- 2015/CVE-2015-6835.json Checker and PoC
+3- 2015/CVE-2015-6835.json PoC
 (https://github.com//ockeghem//CVE-2015-6835-checker) 
 
 This PHP code is an example of exploitation of a known vulnerability called CVE-2015-6835. To understand what the code does, let's break it down into parts:
