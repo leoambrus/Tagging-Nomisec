@@ -3,36 +3,25 @@
 
 This code does both: it first checks if a WordPress website is vulnerable to a specific security issue in the Ninja Forms plugin, and if it determines that the site is vulnerable, it attempts to exploit the vulnerability by sending a payload.
 Here's how it works:
-It checks if the target WordPress site is running a vulnerable version of the Ninja Forms plugin by examining the contents of the readme.txt file associated with the plugin. If it detects a vulnerable version (<= 3.6.25), it reports that the Ninja Forms plugin is vulnerable.
-If the site is found to be vulnerable, it proceeds to the exploit() function, which sends a payload to the site using a POST request to the wp-admin/admin-ajax.php endpoint. The payload is sent to exploit the vulnerability.
-The payload sent to the site is not shown in the code but should be customized by the user to execute specific actions or commands on the target system.
-So, the code combines vulnerability checking with an actual exploitation attempt, making it both a checker and an exploit tool. However, please note that using this code for exploiting websites without proper authorization is illegal and unethical. It should only be used for educational and ethical purposes, such as testing your own websites or systems for vulnerabilities.
-
+   It checks if the target WordPress site is running a vulnerable version of the Ninja Forms plugin by examining the contents of the readme.txt file associated with the plugin. If it detects a vulnerable version (<= 3.6.25), it reports that the Ninja Forms plugin is vulnerable.
+   If the site is found to be vulnerable, it proceeds to the exploit() function, which sends a payload to the site using a POST request to the wp-admin/admin-ajax.php endpoint. The payload is sent to exploit the vulnerability.
+   The payload sent to the site is not shown in the code but should be customized by the user to execute specific actions or commands on the target system.
+   So, the code combines vulnerability checking with an actual exploitation attempt, making it both a checker and an exploit tool. However, please note that using this code for exploiting websites without proper authorization is illegal and unethical. It should only be used for educational and ethical purposes, such as testing your own websites or systems for vulnerabilities.
 
 2-2018/CVE-2018-7600.json PoC
 (https://github.com//Damian972//drupalgeddon-2) 
  
 This PHP code is an exploit for the vulnerability CVE-2018-7600, also known as Drupalgeddon or SA-CORE-2018-002, which affected Drupal versions 7.x and 8.x. The vulnerability allowed remote execution of unauthenticated code.
 Here's an overview of what the code does:
-
--The code defines a command to be executed on the target server, in this case the command "echo GOOD."
-
--It also defines some settings, such as output to file and whether to show the result.
-
--Defines payloads for Drupal versions 7.x and 8.x, specifying the URLs and POST parameters required to exploit the vulnerability.
-
--There is a function called getVersion($target) that checks whether the target is using Drupal and, if so, what version. This is done by checking the "X-Generator" HTTP header in the HTTP request response.
-
--The code prompts the user to enter the destination URL.
-
--It checks whether the target is using Drupal and, if so, which version.
-
--It then attempts to exploit the vulnerability by sending an HTTP POST request with the payload corresponding to the Drupal version. It uses the cURL function to make this request.
-
--If the response contains the string "GOOD," this means the exploit was successful, and the code will report that the target appears to be exploitable. It can also save the target to an output file if configured to do so.
-
--The code will display the result of the request, which may include executing the command on the target server.
-
+   -The code defines a command to be executed on the target server, in this case the command "echo GOOD."
+   -It also defines some settings, such as output to file and whether to show the result.
+   -Defines payloads for Drupal versions 7.x and 8.x, specifying the URLs and POST parameters required to exploit the vulnerability.
+   -There is a function called getVersion($target) that checks whether the target is using Drupal and, if so, what version. This is done by checking the "X-Generator" HTTP header in the HTTP request response.
+   -The code prompts the user to enter the destination URL.
+   -It checks whether the target is using Drupal and, if so, which version.
+   -It then attempts to exploit the vulnerability by sending an HTTP POST request with the payload corresponding to the Drupal version. It uses the cURL function to make this request.
+   -If the response contains the string "GOOD," this means the exploit was successful, and the code will report that the target appears to be exploitable. It can also save the target to an output file if configured to do so.
+   -The code will display the result of the request, which may include executing the command on the target server.
 This code is a real exploit that attempts to exploit the Drupalgeddon vulnerability on a specific target.
 
 
@@ -41,35 +30,30 @@ This code is a real exploit that attempts to exploit the Drupalgeddon vulnerabil
 (https://github.com//ockeghem//CVE-2015-6835-checker) 
 
 This PHP code is an example of exploitation of a known vulnerability called CVE-2015-6835. To understand what the code does, let's break it down into parts:
-
-- Class1 Class Definition:
-A class called Class1 is defined.
-Inside the class, there is a __destruct() method which is a magic method in PHP. This method is automatically called when an object of the class is destroyed. However, in this case, the method was defined to print the message "CVE-2015-6835 vulnerable" when the object is destroyed.
-
-- Creating Manipulated Session Data:
-The $sessdata variable contains manipulated session data in string format. This session data is crafted to exploit the CVE-2015-6835 vulnerability. They include an entry that appears to be a serialization of an object of class Class1.
-
-- Session Start:
-session_start() is called to start a PHP session.
-
-- Session Decoding:
-session_decode($sessdata) is used to decode the session data provided in the $sessdata variable. Manipulation of session data, especially the inclusion of serialization of an object of class Class1, is designed to trigger the vulnerability.
-
-- Session Data Printing:
-var_dump($_SESSION) is used to display the decoded session data on the screen.
-
-- Session Destruction:
-session_destroy() is called to destroy a PHP session.
-
+   - Class1 Class Definition:
+      A class called Class1 is defined.
+      Inside the class, there is a __destruct() method which is a magic method in PHP. This method is automatically called when an object of the class is destroyed. However, in this case, the method was defined to print the message "CVE-2015-6835 vulnerable" when the object is destroyed.
+   - Creating Manipulated Session Data:
+      The $sessdata variable contains manipulated session data in string format. This session data is crafted to exploit the CVE-2015-6835 vulnerability. They include an entry that appears to be a serialization of an object of class Class1.
+   - Session Start:
+      session_start() is called to start a PHP session.
+   - Session Decoding:
+      session_decode($sessdata) is used to decode the session data provided in the $sessdata variable. Manipulation of session data, especially the inclusion of serialization of an object of class Class1, is designed to trigger the vulnerability.
+   - Session Data Printing:
+      var_dump($_SESSION) is used to display the decoded session data on the screen.
+   - Session Destruction:
+      session_destroy() is called to destroy a PHP session.
 The main purpose of this code is to demonstrate the vulnerability CVE-2015-6835, which is related to the manipulation of serialized data in PHP sessions. The code exploits this vulnerability by including the serialization of a Class1 class object in the session data and then printing the session state. The result of the execution will be the printout of the message "CVE-2015-6835 vulnerable", implying that the vulnerability was successfully exploited.
 
 
 4. 2020/CVE-2020-3952.json PoC
+(https://github.com/chronoloper/CVE-2020-3952)
 
 This is a Python script that exploits a known vulnerability (CVE-2020-3952) on VMware vCenter servers to check if the server is vulnerable to this specific CVE. CVE-2020-3952 allowed an attacker with access to the LDAP port of VMware vCenter to execute arbitrary commands as the root user.
 
 
 5. 2021/CVE-2021-22986.json PoC
+(https://github.com/dorkerdevil/CVE-2021-22986-Poc)
 
 This Python script is a code proof of concept that checks if a target is vulnerable to a specific vulnerability, identified as CVE-2021-22986. The vulnerability is related to F5 BIG-IP devices, allowing for remote code execution without authentication.
 
