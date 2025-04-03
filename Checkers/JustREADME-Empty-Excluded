@@ -1,4 +1,4 @@
-Contém apenas o README
+Just README
 https://github.com/scanfsec/HPE-iMC-7.3-RMI-Java-Deserialization
 https://github.com/madneal/codeql-scanner
 https://github.com/jyotisahu98/logpresso-CVE-2021-44228-Scanner
@@ -16,11 +16,11 @@ https://github.com/SecurityWillCheck/CVE-2022-43271
 https://github.com/anthophilee/A2SV--SSL-VUL-Scan
 
 
-Foi excluído
+Excluded
 https://github.com/cergo123/log4j-dork-scanner
 
 
-Está vazio
+Empty
 https://github.com/flxhaas/Scan-CVE-2021-44228
 https://github.com/jyotisahu98/logpresso-CVE-2021-44228-Scanner
 https://github.com/TamiiLambrado/Apache-Struts-CVE-2017-5638-RCE-Mass-Scanner
