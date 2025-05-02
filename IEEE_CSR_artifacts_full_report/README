@@ -1,1 +1,29 @@
+Classification of Software Vulnerability Artifacts
+This repository contains the PDF version of the research article titled "Classification of Software Vulnerability Artifacts."
 
+📄 Article Summary
+The paper presents a methodology for classifying, filtering, and annotating software vulnerability artifacts, such as patches, exploits, proof-of-concept (PoC) codes, and checkers. By analyzing artifacts collected from GitHub through the NomiSec platform, the study highlights the importance of artifact classification in understanding the exploitation potential of vulnerabilities.
+
+Key contributions include:
+
+Evaluation of the coverage and relevance of sources like NomiSec.
+
+Identification of non-threatening artifacts and their role in exploit understanding.
+
+Visualization and clustering of vulnerability-related artifacts.
+
+Research hypotheses exploring the relationship between artifact types, network exposure, and user reputation.
+
+📌 Main Hypotheses
+Most checkers are associated with network-access vulnerabilities, prioritizing broader attack surfaces.
+
+A GitHub user's reputation influences the chances of their artifact being referenced by curated databases like NVD or InTheWild.
+
+✅ Takeaway Message
+Classifying vulnerability-related artifacts enables the identification of high-risk threats and supports more effective risk assessment through the combination of multiple data sources.
+
+📁 Files
+Classification_of_Software_Vulnerability_Artifacts.pdf: Final version of the research paper.
+
+📬 Contact
+For questions or collaboration inquiries, feel free to open an issue or contact the authors.
